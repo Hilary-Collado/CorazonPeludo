@@ -1,0 +1,51 @@
+@import '../VariablesBootstrap.scss';
+
+.sectionHeader {
+    background: rgb(149, 228, 149);
+    // display: flex;
+    // align-items: center;
+    // flex-direction: row;
+    // justify-content: flex-end;
+    // column-count: 9;
+
+    .navBar {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: row-reverse;
+
+        .logo{
+            margin-left: 25px;
+        }
+
+        .navItem {
+            // display: flex;
+            // justify-content: center;
+            // text-align: center;
+            // align-items: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            margin-right: 50px;
+
+
+            .items {
+
+                float: left;
+
+                // text-decoration: none;
+                a {
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 10px;
+                    text-decoration: none;
+                }
+
+            }
+        }
+
+    }
+
+}
