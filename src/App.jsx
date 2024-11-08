@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div className="menu">
-        <section className='sectionMenuHeader'><Header /></section>
+        {/* <section className='sectionMenuHeader'><Header /></section> */}
         <section className='sectionMenuNavbar'><NavBar /></section>
         {/* <Header /> */}
         {/* <NavBar /> */}
