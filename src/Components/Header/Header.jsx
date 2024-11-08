@@ -6,7 +6,10 @@ export default function Header() {
         <>
             <section className="sectionHeader">
                 <nav className="navBar">
-                    <div className="logo">Corazon</div>
+                    <section className="sectionLogo  border-end border-bottom">
+                        <div className="logo">Corazon</div>
+
+                    </section>
                     <ul className="navItem">
                         <li className="items"><a href="">inicio</a></li>
                         <li className="items"><a href="">contacto</a></li>
