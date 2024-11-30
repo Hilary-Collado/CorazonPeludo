@@ -3,8 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 // import './App.css'
 import './App.scss'
-import Header from './Components/Header/Header';
-import NavBar from './Components/Navbar/NavBar';
+import Header from './Components/Menu/Header/Header';
+import NavBar from './Components/Menu/Navbar/NavBar';
 import RecepcionAnimal from './Components/Formularios/Animales/RecepcionAnimal';
 import Recepcion from './Components/Formularios/Animales/RecepcionAnimal';
 import RegistroTarea from './Components/Formularios/Admin/RegistroTarea';
