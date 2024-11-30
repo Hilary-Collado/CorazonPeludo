@@ -5,7 +5,7 @@ import Cancel from '../../Buttons/Cancel';
 const RegistroAlimento = () => {
     return (
         <>
-            <h5 class="card-title">Ingreso De Alimentos</h5>
+            <h3 class="card-title">Ingreso De Alimentos</h3>
 
             <form class="needs-validation" id="form" novalidate>
 
@@ -92,9 +92,10 @@ const RegistroAlimento = () => {
                     </div>
                 </div>
 
-                <div class="text-center mb-3">
-                    <button type="submit" class="btn btn-primary buttonSubmit">Enviar</button>
-                    <button type="reset" class="btn btn-outline-danger">Limpiar</button>
+                <div className="buttons row mb-4">
+                    <section className="col-md-1"><Save /></section>
+                    <section className="col-md-1"><Clear /></section>
+                    <section className="col-md-1"><Cancel /></section>
                 </div>
 
             </form>

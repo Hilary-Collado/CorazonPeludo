@@ -5,7 +5,7 @@ import Cancel from '../../Buttons/Cancel';
 const RegistroAlmacen = () => {
     return (
         <>
-            <h5 class="card-title">Ingreso a Almacen</h5>
+            <h3 class="card-title">Ingreso a Almacen</h3>
             <form class="needs-validation" id="form" novalidate>
 
                 <div class="row mb-3">
@@ -54,6 +54,12 @@ const RegistroAlmacen = () => {
                         <label for="fechaModificacion" class="form-label">Fecha de Modificacion</label>
                         <input type="date" id="fechaModificacion" class="form-control" disabled />
                     </div>
+                </div>
+
+                <div className="buttons row mb-4">
+                    <section className="col-md-1"><Save /></section>
+                    <section className="col-md-1"><Clear /></section>
+                    <section className="col-md-1"><Cancel /></section>
                 </div>
             </form>
         </>

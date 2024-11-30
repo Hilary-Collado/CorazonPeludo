@@ -5,27 +5,8 @@ import Cancel from '../../Buttons/Cancel';
 const RegistroCita = () => {
   return (
     <>
-      {/* <main id="main" class="main">
 
-<div class="pagetitle">
-  <h1>Registro de Citas</h1>
-  <nav>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-      <li class="breadcrumb-item">Formularios</li>
-      <li class="breadcrumb-item active">Registro de citas</li>
-    </ol>
-  </nav>
-</div> */}
-
-      {/* <section class="section">
-  <div class="row">
-    <div class="col-lg-12">
-*/}
-      {/* <div class="card"> 
-        <div class="card-body"> */}
-
-      <h5 class="card-title">Ingreso de Citas</h5>
+      <h3 class="card-title">Ingreso de Citas</h3>
 
       <form class="needs-validation" id="citaForm" novalidate>
 
@@ -107,21 +88,7 @@ const RegistroCita = () => {
           <section className="col-md-1"><Cancel /></section>
         </div>
 
-
-
       </form>
-
-
-
-      {/* </div>
-      </div> */}
-      {/*
-    </div>
-
-  </div>
-</section>
-
-</main> */}
     </>
   )
 }

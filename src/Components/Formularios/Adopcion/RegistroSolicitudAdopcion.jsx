@@ -5,8 +5,7 @@ import Cancel from '../../Buttons/Cancel';
 const RegistroSolicitudAdopcion = () => {
     return (
         <>
-            <h5 class="card-title">Ingreso de Solicitante de Adopción</h5>
-
+            <h3 class="card-title">Ingreso de Solicitante de Adopción</h3>
 
             <form class="needs-validation" id="form" novalidate>
                 <div class="row mb-3">
@@ -253,7 +252,7 @@ const RegistroSolicitudAdopcion = () => {
 
             </form>
 
-       
+
         </>
     )
 }
