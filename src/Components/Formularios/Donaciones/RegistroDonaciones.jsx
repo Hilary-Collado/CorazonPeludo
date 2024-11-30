@@ -1,3 +1,7 @@
+import React from "react";
+import Save from "../../Buttons/Save";
+import Cancel from "../../Buttons/Cancel";
+import Clear from "../../Buttons/Clear";
 
 const RegistroDonaciones = () => {
     return (
@@ -34,9 +38,10 @@ const RegistroDonaciones = () => {
                     </div>
                 </div>
 
-                <div class="text-center mb-3">
-                    <button type="submit" class="btn btn-primary buttonSubmit">Enviar</button>
-                    <button type="reset" class="btn btn-outline-danger">Limpiar</button>
+                <div className="buttons row mb-4">
+                    <section className="col-md-1"><Save /></section>
+                    <section className="col-md-1"><Clear /></section>
+                    <section className="col-md-1"><Cancel /></section>
                 </div>
 
             </form>
