@@ -13,16 +13,15 @@ import RegistroCita from './Components/Formularios/Adopcion/RegistroCita';
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      <div className="card">
+      {/* <div className="card">
         <div className="card-body">
           <RegistroCita />
 
         </div>
-      </div>
+      </div> */}
       {/* <RegistroCita /> */}
 
       {/* <RegistroUsuario/> */}
