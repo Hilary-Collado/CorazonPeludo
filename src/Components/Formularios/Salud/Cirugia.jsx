@@ -1,8 +1,8 @@
-const RegistroActividadEconomica = () => {
+const Cirugia = () => {
     return(
         <>
         </>
     )
 }
 
-export default RegistroActividadEconomica
+export default Cirugia
