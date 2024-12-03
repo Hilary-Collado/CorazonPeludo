@@ -10,12 +10,14 @@ import Recepcion from './Components/Formularios/Animales/RecepcionAnimal';
 import RegistroTarea from './Components/Formularios/Admin/RegistroTarea';
 import RegistroUsuario from './Components/Formularios/Admin/RegistroUsuario';
 import RegistroCita from './Components/Formularios/Adopcion/RegistroCita';
+import RegistroComplicaciones from './Components/Formularios/Enums/RegistroComplicaciones';
 
 
 function App() {
   
   return (
     <>
+    <RegistroComplicaciones/>
       {/* <div className="card">
         <div className="card-body">
           <RegistroCita />
