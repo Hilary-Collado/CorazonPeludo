@@ -12,12 +12,13 @@ import RegistroCita from './Components/Formularios/Adopcion/RegistroCita';
 import RegistroComplicaciones from './Components/Formularios/Enums/RegistroComplicaciones';
 
 import RecepcionAnimal from './Components/Formularios/Animales/RecepcionAnimal';
+import RegistroDonante from './Components/Formularios/Donaciones/RegistroDonante'
 
 function App() {
   return (
     <>
     <div className="container">
-      <RecepcionAnimal />
+      <RegistroDonante />
     </div>
     </>
   )

@@ -63,6 +63,8 @@ const RegistroAlmacen = () => {
                     <section className="col-md-1"><Clear /></section>
                     <section className="col-md-1"><Cancel /></section>
                 </div>
+
+                <Footer />
             </form>
         </>
     )

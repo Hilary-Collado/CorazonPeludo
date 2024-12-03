@@ -36,7 +36,7 @@ const RegistroCompania = () => {
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3">
                         <label for="tipoEmpresa" class="form-label">Tipo empresa</label>
-                        <input type="text" class="form-control" id="tipoEmpresa"/>
+                        <input type="text" class="form-control" id="tipoEmpresa" />
                     </div>
                 </div>
 
@@ -51,14 +51,16 @@ const RegistroCompania = () => {
                     </div>
                     <div class="col-md-6">
                         <label for="fechaModificacion" class="form-label">Fecha de Modificacion</label>
-                        <input type="date" id="fechaModificacion" class="form-control" disabled/>
+                        <input type="date" id="fechaModificacion" class="form-control" disabled />
                     </div>
                 </div>
-
-                <div class="text-center mb-3">
-                    <button type="submit" class="btn btn-primary buttonSubmit">Enviar</button>
-                    <button type="reset" class="btn btn-outline-danger">Limpiar</button>
+                <div className="buttons row mb-4">
+                    <section className="col-md-1"><Save /></section>
+                    <section className="col-md-1"><Clear /></section>
+                    <section className="col-md-1"><Cancel /></section>
                 </div>
+
+                <Footer />
 
             </form>
             {/* <!-- End General Form Elements --> */}
