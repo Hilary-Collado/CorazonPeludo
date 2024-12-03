@@ -1,4 +1,10 @@
+import { useState } from "react"
+
+
+
 const RegistroComplicaciones = () => {
+  const [title, setTitle] = useState([])
+  
     return(
         <>
               <h5 class="card-title">Registro de Complicaciones de Tareas</h5>
