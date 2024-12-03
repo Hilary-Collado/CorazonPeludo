@@ -2,7 +2,6 @@
 const RegistroCompania = () => {
     return (
         <>
-
             <h3 class="card-title">Ingreso de Compañia</h3>
 
             {/* <!-- General Form Elements --> */}
