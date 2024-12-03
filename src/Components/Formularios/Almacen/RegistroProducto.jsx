@@ -1,6 +1,8 @@
-import Save from '../../Buttons/Save';
-import Clear from '../../Buttons/Clear';
-import Cancel from '../../Buttons/Cancel';
+import React from "react";
+import Save from "../../Buttons/Save";
+import Cancel from "../../Buttons/Cancel";
+import Clear from "../../Buttons/Clear";
+import Footer from "../../Footer/Footer";
 
 const RegistroProducto = () => {
     return (

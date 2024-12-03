@@ -1,12 +1,16 @@
-import Save from '../../Buttons/Save';
-import Clear from '../../Buttons/Clear';
-import Cancel from '../../Buttons/Cancel';
+import React from "react";
+import Save from "../../Buttons/Save";
+import Cancel from "../../Buttons/Cancel";
+import Clear from "../../Buttons/Clear";
+import Footer from "../../Footer/Footer";
 
 const RegistroCita = () => {
+  const title = 'Ingreso de Citas'
   return (
     <>
 
-      <h3 class="card-title">Ingreso de Citas</h3>
+      <h3 class="card-title">{title}</h3>
+      {/* <h3 class="card-title">Ingreso de Citas</h3> */}
 
       <form class="needs-validation" id="citaForm" novalidate>
 
@@ -80,13 +84,13 @@ const RegistroCita = () => {
           </div>
         </div>
 
-
-
         <div className="buttons row mb-4">
           <section className="col-md-1"><Save /></section>
           <section className="col-md-1"><Clear /></section>
           <section className="col-md-1"><Cancel /></section>
         </div>
+
+        <Footer />
 
       </form>
     </>

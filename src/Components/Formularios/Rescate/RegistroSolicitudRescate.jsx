@@ -1,3 +1,9 @@
+import React from "react";
+import Save from "../../Buttons/Save";
+import Cancel from "../../Buttons/Cancel";
+import Clear from "../../Buttons/Clear";
+import Footer from "../../Footer/Footer"; 
+
 const RegistroSolicitudRescate = () => {
     return(
         <>
@@ -15,6 +21,7 @@ const RegistroSolicitudRescate = () => {
       <a href="../enums/registroEspecie.html">Crear nueva</a>
       <label for="especie" class="form-label">Especie</label>
 
+{/* VOLVER ESTO UN ARRAY O TRAER DESDE LA DB */}
       <select id="especie" class="form-select">
         {/* <!-- <div class="data-display0"></div> --> */}
         <option value="" disabled selected>Selecciona Una Opcion...</option>

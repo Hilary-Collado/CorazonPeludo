@@ -5,37 +5,20 @@ import viteLogo from '/vite.svg'
 import './App.scss'
 import Header from './Components/Menu/Header/Header';
 import NavBar from './Components/Menu/Navbar/NavBar';
-import RecepcionAnimal from './Components/Formularios/Animales/RecepcionAnimal';
 import Recepcion from './Components/Formularios/Animales/RecepcionAnimal';
 import RegistroTarea from './Components/Formularios/Admin/RegistroTarea';
 import RegistroUsuario from './Components/Formularios/Admin/RegistroUsuario';
 import RegistroCita from './Components/Formularios/Adopcion/RegistroCita';
 import RegistroComplicaciones from './Components/Formularios/Enums/RegistroComplicaciones';
 
+import RecepcionAnimal from './Components/Formularios/Animales/RecepcionAnimal';
 
 function App() {
-  
   return (
     <>
-    <RegistroComplicaciones/>
-      {/* <div className="card">
-        <div className="card-body">
-          <RegistroCita />
-
-        </div>
-      </div> */}
-      {/* <RegistroCita /> */}
-
-      {/* <RegistroUsuario/> */}
-      {/* <RegistroTarea /> */}
-      {/* <Recepcion/> */}
-      {/* <RecepcionAnimal/> */}
-      {/* <div className="menu"> */}
-      {/* <section className='sectionMenuHeader'><Header /></section> */}
-      {/* <section className='sectionMenuNavbar'><NavBar /></section> */}
-      {/* <Header /> */}
-      {/* <NavBar /> */}
-      {/* </div> */}
+    <div className="container">
+      <RecepcionAnimal />
+    </div>
     </>
   )
 }

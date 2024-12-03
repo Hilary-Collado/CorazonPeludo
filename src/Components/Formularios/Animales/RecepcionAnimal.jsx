@@ -3,7 +3,6 @@ import Save from "../../Buttons/Save";
 import Cancel from "../../Buttons/Cancel";
 import Clear from "../../Buttons/Clear";
 import Footer from "../../Footer/Footer";
-import Button from "../../Buttons/Buttons";
 
 import '../../Buttons/Buttons.scss';
 
@@ -165,7 +164,7 @@ const RecepcionAnimal = () => {
                     <section className="col-md-1"><Cancel /></section>
                 </div>
 
-
+                <Footer/>
 
             </form>
         </>
