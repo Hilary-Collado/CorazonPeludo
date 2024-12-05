@@ -1,9 +1,13 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-// import './App.css'
-import './App.scss'
-import Header from './Components/Menu/Header/Header';
+import './App.css'
+// src/index.js
+// import './styles/custom-bootstrap.scss';
+
+// import './App.scss'
+
+import Header from './Components/Menu/Header/HeaderCliente/HeaderCliente';
 import NavBar from './Components/Menu/Navbar/NavBar';
 import Recepcion from './Components/Formularios/Animales/RecepcionAnimal';
 import RegistroTarea from './Components/Formularios/Admin/RegistroTarea';
@@ -13,13 +17,15 @@ import RegistroComplicaciones from './Components/Formularios/Enums/RegistroCompl
 
 import RecepcionAnimal from './Components/Formularios/Animales/RecepcionAnimal';
 import RegistroDonante from './Components/Formularios/Donaciones/RegistroDonante'
+import Cirugia from './Components/Formularios/Salud/Cirugia';
 
 function App() {
   return (
     <>
-    <div className="container">
+    <Cirugia/>
+    {/* <div className="container">
       <RegistroDonante />
-    </div>
+    </div> */}
     </>
   )
 }
