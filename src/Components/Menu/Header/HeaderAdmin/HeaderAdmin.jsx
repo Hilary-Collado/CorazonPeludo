@@ -1,30 +1,36 @@
-import logo from '../img-Componentes/logo.png';
+// imagenes 
+import logo from '../../../img-Componentes/logo.png';
+import profileImg from '../../../img-Componentes/profile-img.jpg'
+
+// iconos 
 import { FaBell } from 'react-icons/fa';
 import { CiSearch } from "react-icons/ci";
 import { BsExclamationCircle } from "react-icons/bs";
 import { GoXCircle } from "react-icons/go";
 import { CiCircleCheck } from "react-icons/ci";
 import { GoInfo } from "react-icons/go";
-// import { BsChatRightText } from "react-icons/bs";
 import { BsChatLeftText } from "react-icons/bs";
-import profileImg from '../img-Componentes/profile-img.jpg'
 import { GoGear } from "react-icons/go";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { CiCircleQuestion } from "react-icons/ci";
 import { BsBoxArrowRight } from "react-icons/bs";
+import { BsList } from "react-icons/bs";
 
-import './h2.sass'
 
-const HeaderDos = () => {
+import './HeaderAdmin.sass'
+
+const HeaderAdmin = () => {
     return (
         <header id="header" class="header fixed-top d-flex align-items-center">
 
             <div class="d-flex align-items-center justify-content-between">
                 <a href="" class="logo d-flex align-items-center">
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="Logo" />
                     <span class="">Corazon Peludo</span>
                 </a>
-                <i class="bi bi-list toggle-sidebar-btn"></i>
+                {/* <i class="bi bi-list toggle-sidebar-btn"></i> */}
+                <BsList className='icon toggle-sidebar-btn' />
+
             </div>
             {/* <!-- End Logo --> */}
 
@@ -277,4 +283,4 @@ const HeaderDos = () => {
     )
 }
 
-export default HeaderDos
+export default HeaderAdmin

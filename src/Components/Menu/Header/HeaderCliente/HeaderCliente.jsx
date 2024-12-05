@@ -1,5 +1,5 @@
 import React from "react";
-import './Header.scss';
+import './HeaderCliente.scss';
 
 export default function HeaderCliente() {
     return (
