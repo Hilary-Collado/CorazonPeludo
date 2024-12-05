@@ -39,11 +39,13 @@ const RegistroNivelUrgencia = () => {
                 </div>
 
 
-                <div class="text-center mb-3">
-                    <button type="submit" class="btn btn-primary buttonSubmit">Enviar</button>
-                    <button type="reset" class="btn btn-outline-danger">Limpiar</button>
+                <div className="buttons row mb-4">
+                    <section className="col-md-1"><Save /></section>
+                    <section className="col-md-1"><Clear /></section>
+                    <section className="col-md-1"><Cancel /></section>
                 </div>
 
+                <Footer />
             </form>
             {/* <!-- End General Form Elements --> */}
 
