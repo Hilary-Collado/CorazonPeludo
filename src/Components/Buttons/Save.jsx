@@ -1,6 +1,5 @@
 import React from "react";
-import './Save';
-import './Buttons.scss'
+import './Buttons.scss';
 
 const Save = () => {
     return (

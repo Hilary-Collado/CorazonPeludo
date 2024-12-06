@@ -15,7 +15,7 @@ const RegistroTipoEnfermedad = () => {
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="descripcion" class="form-label">Descripcion</label>
-                        <input type="text" class="form-control" id="descripcion" required/>
+                        <input type="text" class="form-control" id="descripcion" required />
                     </div>
                 </div>
 
@@ -30,16 +30,15 @@ const RegistroTipoEnfermedad = () => {
                     </div>
                     <div class="col-md-6">
                         <label for="fechaModificacion" class="form-label">Fecha de Modificacion</label>
-                        <input type="date" id="fechaModificacion" class="form-control" disabled/>
+                        <input type="date" id="fechaModificacion" class="form-control" disabled />
                     </div>
                 </div>
-                <div className="buttons row mb-4">
-                    <section className="col-md-1"><Save /></section>
-                    <section className="col-md-1"><Clear /></section>
-                    <section className="col-md-1"><Cancel /></section>
-                </div>
 
-                <Footer />
+                <div className="text-center  mb-3">
+                    <Save />
+                    <Clear />
+                    <Cancel />
+                </div>
 
             </form>
             {/* <!-- End General Form Elements --> */}

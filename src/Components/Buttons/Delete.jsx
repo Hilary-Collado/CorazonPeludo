@@ -1,5 +1,5 @@
 import React from "react";
-import './Save';
+import './Buttons.scss';
 
 const Delete = () =>{
     return(

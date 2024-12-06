@@ -3,6 +3,7 @@ import Save from "../../Buttons/Save";
 import Cancel from "../../Buttons/Cancel";
 import Clear from "../../Buttons/Clear";
 import Footer from "../../Footer/Footer";
+import Close from "../../Buttons/Close";
 
 const RegistroDonante = () => {
     return (
@@ -205,12 +206,19 @@ const RegistroDonante = () => {
                             </div>
 
                             <div className="modal-footer">
-                                <button type="submit"
+                                {/* <button type="submit"
                                     className="btn btn-primary buttonSubmit">Enviar</button>
                                 <button type="reset"
                                     className="btn btn-outline-danger buttonSubmit">Limpiar</button>
                                 <button type="button" className="btn btn-outline-dark"
-                                    data-bs-dismiss="modal">Close</button>
+                                    data-bs-dismiss="modal">Close</button> */}
+
+                                <div className="text-center  mb-3">
+                                    <Save />
+                                    <Clear />
+                                    <Close/>
+                                    <Cancel />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -337,10 +345,10 @@ const RegistroDonante = () => {
                             {/* BOTONES  */}
 
                             <div className="modal-footer">
-                                <div className="buttons row mb-4">
-                                    <section className="col-md-1"><Save /></section>
-                                    <section className="col-md-1"><Clear /></section>
-                                    <section className="col-md-1"><Cancel /></section>
+                                <div className="text-center  mb-3">
+                                    <Save />
+                                    <Clear />
+                                    <Cancel />
                                 </div>
                             </div>
 
@@ -351,8 +359,6 @@ const RegistroDonante = () => {
 
             </form>
             {/* End General Form Elements */}
-
-            <Footer />
         </>
     )
 }
