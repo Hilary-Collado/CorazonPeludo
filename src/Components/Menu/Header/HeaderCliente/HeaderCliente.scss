@@ -1,4 +1,4 @@
-@import '../../../VariablesBootstrap.scss';
+@import url('../../../VariablesBootstrap.scss');
 
 .sectionHeader {
     // background: rgb(149, 228, 149);
@@ -19,7 +19,7 @@
         .logo {
             margin-left: 25px;
             padding: 15px;
-            font-family: $lobster-regular;
+            // font-family: $lobster-regular;
         }
 
         .navItem {

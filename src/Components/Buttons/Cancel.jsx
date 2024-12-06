@@ -4,7 +4,7 @@ import './Save';
 const Cancel = () =>{
     return(
         <>
-        <button type="reset" className="btn btn-danger buttonCancel">Cancelar</button>
+        <button type="reset" className="btn btn-danger buttonCancel button">Cancelar</button>
         </>
     )
 }

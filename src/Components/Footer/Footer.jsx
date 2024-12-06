@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="copyright">
             <p className="copy copy-inicio"> &copy; Copyright - {currentYear} </p>
         </div>
-        <div className="credits"> Designed by Hilary Collado</div>
+        <div className="credits"> by Hilary Collado</div>
     </footer>);
 }
 export default Footer

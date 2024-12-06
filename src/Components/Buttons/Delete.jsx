@@ -4,7 +4,7 @@ import './Save';
 const Delete = () =>{
     return(
         <>
-        <button type="reset" className="btn btn-danger buttonDelete">Eliminar</button>
+        <button type="reset" className="btn btn-outline-danger buttonDelete button">Eliminar</button>
         </>
     )
 }
