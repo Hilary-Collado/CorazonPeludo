@@ -35,7 +35,7 @@ const RegistroTratamiento = () => {
                                         <div class="row mb-3">
                                             <div class="col-md-6 mb-3">
                                                 <label for="idEnfermedad" class="form-label">ID Enfermedad</label>
-                                                <input type="text" class="form-control" id="idEnfermedad" disabled/>
+                                                <input type="text" class="form-control" id="idEnfermedad" disabled />
                                             </div>
 
                                         </div>
@@ -43,7 +43,7 @@ const RegistroTratamiento = () => {
                                         <div class="row mb-3">
                                             <div class="col-md-6 mb-3">
                                                 <label for="nombre" class="form-label">Nombre</label>
-                                                <input type="text" class="form-control" id="nombre" required/>
+                                                <input type="text" class="form-control" id="nombre" required />
                                             </div>
                                             <div class="col-md-6">
                                                 <a href="../enums/registroTipoTarea.html">Crear nueva</a>
@@ -57,11 +57,11 @@ const RegistroTratamiento = () => {
                                         <div class="row mb-3">
                                             <div class="col-md-6 mb-3">
                                                 <label for="prevalencia" class="form-label">Prevalencia</label>
-                                                <input type="text" class="form-control" id="prevalencia" required/>
+                                                <input type="text" class="form-control" id="prevalencia" required />
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="porcientoMortalidad" class="form-label">Porciento de Mortalidad</label>
-                                                <input type="number" class="form-control" id="porcientoMortalidad" required/>
+                                                <input type="number" class="form-control" id="porcientoMortalidad" required />
                                             </div>
                                         </div>
 
@@ -75,13 +75,14 @@ const RegistroTratamiento = () => {
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="fechaModificacion" class="form-label">Fecha de Modificacion</label>
-                                                <input type="date" id="fechaModificacion" class="form-control" disabled/>
+                                                <input type="date" id="fechaModificacion" class="form-control" disabled />
                                             </div>
                                         </div>
 
-                                        <div class="text-center mb-3">
-                                            <button type="submit" class="btn btn-primary buttonSubmit">Enviar</button>
-                                            <button type="reset" class="btn btn-outline-danger">Limpiar</button>
+                                        <div className="text-center  mb-3">
+                                            <Save />
+                                            <Clear />
+                                            <Cancel />
                                         </div>
 
                                     </form>
