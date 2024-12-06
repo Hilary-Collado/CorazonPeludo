@@ -19,7 +19,7 @@ import RegistroSolicitudRescate from './Components/Formularios/Rescate/RegistroS
 function App() {
   return (
     <>
-    <RegistroDonante/>
+    <RegistroTarea/>
     {/* <RegistroSolicitudRescate/> */}
     {/* <Cirugia/> */}
     <Footer/>
