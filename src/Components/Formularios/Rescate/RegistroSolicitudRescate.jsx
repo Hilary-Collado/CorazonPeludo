@@ -117,12 +117,12 @@ const RegistroSolicitudRescate = () => {
           </div>
         </div>
 
-        <div className="buttons row mb-4">
-          <section className="col-md-1"><Save /></section>
-          <section className="col-md-1"><Clear /></section>
-          <section className="col-md-1"><Cancel /></section>
+        <div className="text-center  mb-3">
+          <Save />
+          <Clear />
+          <Cancel />
         </div>
-        
+
       </form>
       {/* <!-- End General Form Elements --> */}
 
