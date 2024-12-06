@@ -1,17 +1,18 @@
 // import '../../../App.css'
 import '../../App.css'
 
-const CardBase = ({todo}) => {
-    const {title } = todo
+const CardBase = ({titulo}) => {
+    const { title } = titulo
+      
     return (
         <>
-            <div class="pagetitle">
+            <div className="pagetitle">
                 <h1>{title}</h1>
                 <nav> 
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="">Home</a></li>
-                        <li class="breadcrumb-item">Formularios</li>
-                        <li class="breadcrumb-item active">{title}</li>
+                    <ol className="breadcrumb">
+                        <li className="breadcrumb-item"><a href="">Home</a></li>
+                        <li className="breadcrumb-item">Formularios</li>
+                        <li className="breadcrumb-item active">{title}</li>
                     </ol>
                 </nav>
             </div>
@@ -19,7 +20,29 @@ const CardBase = ({todo}) => {
         </>
 
     )
-
 }
 
 export default CardBase
+
+
+
+// const CardBase = ({titulo}) => {
+//     const { title } = titulo
+      
+//     return (
+//         <>
+//             <div className="pagetitle">
+//                 <h1>{title}</h1>
+//                 <nav> 
+//                     <ol className="breadcrumb">
+//                         <li className="breadcrumb-item"><a href="">Home</a></li>
+//                         <li className="breadcrumb-item">Formularios</li>
+//                         <li className="breadcrumb-item active">{title}</li>
+//                     </ol>
+//                 </nav>
+//             </div>
+//             {/* <!-- End Page Title --> */}
+//         </>
+
+//     )
+// }

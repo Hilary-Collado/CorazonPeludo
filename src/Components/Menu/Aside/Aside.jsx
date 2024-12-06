@@ -1,14 +1,25 @@
+import React, { useState } from "react";
+import CardBaseDos from "../../Formularios/CardBaseDos";
+import RecepcionAnimal from "../../Formularios/Animales/RecepcionAnimal";
+
+
 const Aside = () => {
+    const [titulo, setTitulo] = useState({
+        title: "hola que tal",
+        // title: "Ingreso De Animales",
+    })
+
+    
     return (
         <>
-            <aside id="sidebar" class="sidebar">
+            <aside id="sidebar" className="sidebar">
 
-                <ul class="sidebar-nav" id="sidebar-nav">
+                <ul className="sidebar-nav" id="sidebar-nav">
 
                     {/* <!-- Dashboard Nav --> */}
-                    <li class="nav-item">
-                        <a class="nav-link " href="../NiceAdmin/index.html">
-                            <i class="bi bi-grid"></i>
+                    <li className="nav-item">
+                        <a className="nav-link " href="">
+                            <i className="bi bi-grid"></i>
                             <span>Inicio</span>
                         </a>
                     </li>
@@ -16,37 +27,39 @@ const Aside = () => {
 
 
 
-                    {/* <!--Resgitro --> */}
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" data-bs-target="#animales-nav" data-bs-toggle="collapse" href="#">
-                            <i class="bi bi-menu-button-wide"></i><span>Animales</span><i class="bi bi-chevron-down ms-auto"></i>
+                    {/* <!--Registro --> */}
+                    <li className="nav-item">
+                        <a className="nav-link collapsed" data-bs-target="#animales-nav" data-bs-toggle="collapse" href="#">
+                            <i className="bi bi-menu-button-wide"></i><span>Animales</span><i className="bi bi-chevron-down ms-auto"></i>
                         </a>
-                        <ul id="animales-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <CardBaseDos titulo={titulo}/> 
+                        {/* <RecepcionAnimal titulo={titulo}/> */}
+                        {/* <ul id="animales-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
                             <li>
-                                <a href="../animal/registroAnimales.html">
-                                    <i class="bi bi-circle"></i><span>Registro De Animales</span>
+                                <a href="">
+                                    <i className="bi bi-circle"></i><span>Registro De Animales</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../consultas/ConsultaAnimales.html">
-                                    <i class="bi bi-circle"></i><span>Consulta Animales</span>
+                                    <i className="bi bi-circle"></i><span>Consulta Animales</span>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> */}
                     </li>
                     {/* <!-- End registro Nav --> */}
 
 
 
                     {/* <!--rescate --> */}
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" data-bs-target="#enum-nav" data-bs-toggle="collapse" href="#">
-                            <i class="bi bi-menu-button-wide"></i><span>Rescate</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <li className="nav-item">
+                        <a className="nav-link collapsed" data-bs-target="#enum-nav" data-bs-toggle="collapse" href="#">
+                            <i className="bi bi-menu-button-wide"></i><span>Rescate</span><i className="bi bi-chevron-down ms-auto"></i>
                         </a>
-                        <ul id="enum-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <ul id="enum-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
                             <li>
                                 <a href="../rescate/solicitudRescate.html">
-                                    <i class="bi bi-circle"></i><span>Solicitud de Rescate</span>
+                                    <i className="bi bi-circle"></i><span>Solicitud de Rescate</span>
                                 </a>
                             </li>
                         </ul>
@@ -54,19 +67,19 @@ const Aside = () => {
                     {/* <!-- End registro Nav --> */}
 
                     {/* <!-- adopcion  --> */}
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" data-bs-target="#adopcion" data-bs-toggle="collapse" href="#">
-                            <i class="bi bi-menu-button-wide"></i><span>Adopcion</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <li className="nav-item">
+                        <a className="nav-link collapsed" data-bs-target="#adopcion" data-bs-toggle="collapse" href="#">
+                            <i className="bi bi-menu-button-wide"></i><span>Adopcion</span><i className="bi bi-chevron-down ms-auto"></i>
                         </a>
-                        <ul id="adopcion" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <ul id="adopcion" className="nav-content collapse " data-bs-parent="#sidebar-nav">
                             <li>
                                 <a href="../adopcion/registroCita.html">
-                                    <i class="bi bi-circle"></i><span>Registro de Citas</span>
+                                    <i className="bi bi-circle"></i><span>Registro de Citas</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../adopcion/registroSolicitudAdopcion.html">
-                                    <i class="bi bi-circle"></i><span>Registro de Solicitante</span>
+                                    <i className="bi bi-circle"></i><span>Registro de Solicitante</span>
                                 </a>
                             </li>
                         </ul>
@@ -75,19 +88,19 @@ const Aside = () => {
 
 
                     {/* <!-- Almacen  --> */}
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" data-bs-target="#Almacen" data-bs-toggle="collapse" href="#">
-                            <i class="bi bi-menu-button-wide"></i><span>Almacen</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <li className="nav-item">
+                        <a className="nav-link collapsed" data-bs-target="#Almacen" data-bs-toggle="collapse" href="#">
+                            <i className="bi bi-menu-button-wide"></i><span>Almacen</span><i className="bi bi-chevron-down ms-auto"></i>
                         </a>
-                        <ul id="Almacen" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <ul id="Almacen" className="nav-content collapse " data-bs-parent="#sidebar-nav">
                             <li>
                                 <a href="../almacen/registroAlimento.html">
-                                    <i class="bi bi-circle"></i><span>Registro de Alimentos</span>
+                                    <i className="bi bi-circle"></i><span>Registro de Alimentos</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../almacen/registroAlmacen.html">
-                                    <i class="bi bi-circle"></i><span>Registro de Almacen</span>
+                                    <i className="bi bi-circle"></i><span>Registro de Almacen</span>
                                 </a>
                             </li>
 
@@ -97,19 +110,19 @@ const Aside = () => {
 
 
                     {/* <!-- consultas  --> */}
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" data-bs-target="#consulta" data-bs-toggle="collapse" href="#">
-                            <i class="bi bi-menu-button-wide"></i><span>Consultas</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <li className="nav-item">
+                        <a className="nav-link collapsed" data-bs-target="#consulta" data-bs-toggle="collapse" href="#">
+                            <i className="bi bi-menu-button-wide"></i><span>Consultas</span><i className="bi bi-chevron-down ms-auto"></i>
                         </a>
-                        <ul id="consulta" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <ul id="consulta" className="nav-content collapse " data-bs-parent="#sidebar-nav">
                             <li>
                                 <a href="../consultas/ConsultaAlimento.html">
-                                    <i class="bi bi-circle"></i><span>Consulta de Alimentos</span>
+                                    <i className="bi bi-circle"></i><span>Consulta de Alimentos</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../consultas/ConsultaAnimales.html">
-                                    <i class="bi bi-circle"></i><span>Consulta de Animales</span>
+                                    <i className="bi bi-circle"></i><span>Consulta de Animales</span>
                                 </a>
                             </li>
 
@@ -118,19 +131,19 @@ const Aside = () => {
                     {/* <!-- End Components Nav --> */}
 
                     {/* <!-- consultas  --> */}
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" data-bs-target="#otros-nav" data-bs-toggle="collapse" href="#">
-                            <i class="bi bi-menu-button-wide"></i><span>Otros registros</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <li className="nav-item">
+                        <a className="nav-link collapsed" data-bs-target="#otros-nav" data-bs-toggle="collapse" href="#">
+                            <i className="bi bi-menu-button-wide"></i><span>Otros registros</span><i className="bi bi-chevron-down ms-auto"></i>
                         </a>
-                        <ul id="otros-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <ul id="otros-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
                             <li>
                                 <a href="../enums/registroTipoPiel.html">
-                                    <i class="bi bi-circle"></i><span>Tipo de Piel</span>
+                                    <i className="bi bi-circle"></i><span>Tipo de Piel</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../enums/registroEspecie.html">
-                                    <i class="bi bi-circle"></i><span>Registro de Especie</span>
+                                    <i className="bi bi-circle"></i><span>Registro de Especie</span>
                                 </a>
                             </li>
                         </ul>

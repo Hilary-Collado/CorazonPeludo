@@ -15,14 +15,18 @@ import RegistroDonante from './Components/Formularios/Donaciones/RegistroDonante
 import Cirugia from './Components/Formularios/Salud/Cirugia';
 import Footer from './Components/Footer/Footer';
 import RegistroSolicitudRescate from './Components/Formularios/Rescate/RegistroSolicitudRescate';
+import Aside from './Components/Menu/Aside/Aside';
+import CardMedio from './Components/Formularios/CardMedio';
 
 function App() {
   return (
     <>
-    <RegistroTarea/>
+    <CardMedio/>
+    {/* <Aside/> */}
+    <RecepcionAnimal/>
     {/* <RegistroSolicitudRescate/> */}
     {/* <Cirugia/> */}
-    <Footer/>
+    {/* <Footer/> */}
     </>
   )
 }

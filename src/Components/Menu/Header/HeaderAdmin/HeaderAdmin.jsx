@@ -1,7 +1,7 @@
 // imagenes 
 import logo from '../../../img-Componentes/logo.png';
 import profileImg from '../../../img-Componentes/profile-img.jpg'
-
+import '../../../../App.css'
 // iconos 
 import { FaBell } from 'react-icons/fa';
 import { CiSearch } from "react-icons/ci";
