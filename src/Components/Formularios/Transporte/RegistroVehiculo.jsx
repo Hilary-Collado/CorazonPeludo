@@ -8,7 +8,7 @@ const RegistroVehiculo = () => {
     return (
         <>
             <main id="main" class="main">
-                
+
                 <div class="pagetitle">
                     <h1>Registro de Tipo de Tarea</h1>
                     <nav>
@@ -35,7 +35,7 @@ const RegistroVehiculo = () => {
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <label for="descripcion" class="form-label">Descripcion</label>
-                                                <input type="text" class="form-control" id="descripcion" required/>
+                                                <input type="text" class="form-control" id="descripcion" required />
                                             </div>
                                         </div>
 
@@ -50,13 +50,14 @@ const RegistroVehiculo = () => {
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="fechaModificacion" class="form-label">Fecha de Modificacion</label>
-                                                <input type="date" id="fechaModificacion" class="form-control" disabled/>
+                                                <input type="date" id="fechaModificacion" class="form-control" disabled />
                                             </div>
                                         </div>
 
-                                        <div class="text-center mb-3">
-                                            <button type="submit" class="btn btn-primary buttonSubmit">Enviar</button>
-                                            <button type="reset" class="btn btn-outline-danger">Limpiar</button>
+                                        <div className="text-center  mb-3">
+                                            <Save />
+                                            <Clear />
+                                            <Cancel />
                                         </div>
 
                                     </form>
