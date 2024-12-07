@@ -1,9 +1,11 @@
-// .buttons{
-//     display: flex;
-//     justify-content: flex-end;
+@import '../VariablesBootstrap.scss';
 
-    .button{
-        margin-right: 15px;
+.button {
+    margin-right: 15px;
 
-    }
-// }
+}
+
+.buttonClear {
+    border-color: $orange;
+    color: $orange;
+}

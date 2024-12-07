@@ -5,10 +5,10 @@ const Clear = () => {
     return (
         <>
             {/* <section className="row"> */}
-                <button type="reset" className="btn btn-outline-warning buttonClear button">Limpiar</button>
+                <button type="reset" className="btn buttonClear button">Limpiar</button>
             {/* </section> */}
         </>
     )
 }
-
+// btn-outline-orange 
 export default Clear
