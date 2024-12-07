@@ -7,12 +7,9 @@ import '../../../App.css';
 
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
-import CardMedio from "../CardMedio";
-import CardBase from "../CardBase";
+import PageTitle from "../PageTitle";
 
 const RecepcionAnimal =  () => {
-    // const { title, nombre, animal } = titulo  
-    
     const [titulo, setTitulo] = useState({
         title: "Ingreso de Animales",
     })
@@ -24,7 +21,7 @@ const RecepcionAnimal =  () => {
             <HeaderAdmin />  
             <Aside />
             <main id="main" className="main">
-                <CardBase titulo={titulo} />
+                <PageTitle titulo={titulo} />
                 <section className="section">
                     <div className="row">
                         <div className="col-lg-12">
@@ -32,7 +29,7 @@ const RecepcionAnimal =  () => {
                             <div className="card">
                                 <div className="card-body">
                                     {/* <h5 className="card-title">Ingreso De Animales</h5> */}
-                                    <h5 className="card-title">{title}</h5>
+                                    <h5 class="card-title titulo">{title}</h5>
 
                                     <form action="" id="form">
                                         <div className="row mb-3">

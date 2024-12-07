@@ -2,30 +2,32 @@ import React, { useState } from "react";
 import Save from "../../Buttons/Save";
 import Cancel from "../../Buttons/Cancel";
 import Clear from "../../Buttons/Clear";
-import CardBase from "../CardBase";
+import PageTitle from "../PageTitle";
 
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
 
 const RegistroAlimento = () => {
-    const [tituloAlimento, setTituloAlimento] = useState({
+    const [registroAlimento, setRegistroAlimento] = useState({
         title: "Ingreso De Alimentos",
     })
+
+    const { title } = registroAlimento
 
     return (
         <>
             <HeaderAdmin />
             <Aside />
             <main id="main" className="main">
-                <CardBase titulo={tituloAlimento} />
+                <PageTitle titulo={registroAlimento} />
                 <section className="section">
                     <div className="row">
                         <div className="col-lg-12">
 
                             <div className="card">
                                 <div className="card-body">
-                                    <h3 class="card-title">Ingreso De Alimentos</h3>
-
+                                    <h5 class="card-title titulo">{title}</h5>
+ 
                                     <form class="needs-validation" id="form" novalidate>
 
                                         <div class="row mb-3">

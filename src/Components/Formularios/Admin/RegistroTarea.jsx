@@ -4,17 +4,17 @@ import Cancel from "../../Buttons/Cancel";
 import Clear from "../../Buttons/Clear";
 import HeaderAdmin from '../../Menu/Header/HeaderAdmin/HeaderAdmin'
 import Aside from "../../Menu/Aside/Aside";
-import CardBase from "../CardBase";
+import PageTitle from "../PageTitle";
 import '../../../App.css';
 
 
 const RegistroTarea = () => {
 
-    const [titulo, setTitulo] = useState({
+    const [registroTarea, setRegistroTarea] = useState({
         title: "Registro de Tareas",
     })
-    
-    const { title } = titulo
+
+    const { title } = registroTarea
 
     return (
         <>
@@ -23,7 +23,7 @@ const RegistroTarea = () => {
 
             <main id="main" className="main">
 
-                <CardBase titulo={titulo} />
+                <PageTitle titulo={registroTarea} />
 
                 <section className="section">
                     <div className="row">
@@ -31,7 +31,7 @@ const RegistroTarea = () => {
 
                             <div className="card">
                                 <div className="card-body">
-                                    <h5 className="card-title">{title}</h5>
+                                    <h5 class="card-title titulo">{title}</h5>
 
                                     <form className="needs-validation" id="form" novalidate>
 
@@ -78,7 +78,7 @@ const RegistroTarea = () => {
                                             </div>
                                         </div>
 
-                                        <div classNameName="text-center  mb-3">
+                                        <div className="text-center mb-3">
                                             <Save />
                                             <Clear />
                                             <Cancel />

@@ -5,10 +5,26 @@ import Clear from "../../Buttons/Clear";
 import Footer from "../../Footer/Footer";
 
 const RegistroDonaciones = () => {
+    const [titulo, setTitulo] = useState({
+        title: "Ingreso de Animales",
+    })
+    
+    const { title } = titulo
+    
     return (
         <>
+            <HeaderAdmin />  
+            <Aside />
+            <main id="main" className="main">
+                <PageTitle titulo={titulo} />
+                <section className="section">
+                    <div className="row">
+                        <div className="col-lg-12">
 
-            <h3 class="card-title">Ingreso De Donaciones</h3>
+                            <div className="card">
+                                <div className="card-body">
+                                    {/* <h5 className="card-title">Ingreso De Animales</h5> */}
+                                    <h5 class="card-title titulo">{title}</h5>
 
             <form class="needs-validation" id="form" novalidate>
 
@@ -46,6 +62,17 @@ const RegistroDonaciones = () => {
                 </div>
 
             </form>
+
+            
+            </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+            </main>
         </>
     )
 }

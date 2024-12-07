@@ -18,11 +18,18 @@ import RegistroSolicitudRescate from './Components/Formularios/Rescate/RegistroS
 import Aside from './Components/Menu/Aside/Aside';
 import CardMedio from './Components/Formularios/CardMedio';
 import RegistroAlimento from './Components/Formularios/Almacen/RegistroAlimento';
+import RegistroSolicitudAdopcion from './Components/Formularios/Adopcion/RegistroSolicitudAdopcion';
+import RegistroAlmacen from './Components/Formularios/Almacen/RegistroAlmacen';
+import RegistroProducto from './Components/Formularios/Almacen/RegistroProducto';
+import RegistroProveedores from './Components/Formularios/Almacen/RegistroProveedores';
 
 function App() {
   return (
     <>
-    <RegistroAlimento/>
+    <RegistroProveedores />
+{/* <RegistroProducto/> */}
+    {/* <RegistroAlimento/> */}
+
     {/* <CardMedio/> */}
     {/* <Aside/> */}
     {/* <RecepcionAnimal/> */}

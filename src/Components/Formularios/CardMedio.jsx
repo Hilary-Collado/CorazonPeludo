@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CardBase from "./CardBase"
+import CardBase from "./PageTitle"
 import CardBaseDos from "./CardBaseDos";
 import Aside from "../Menu/Aside/Aside";
 import RecepcionAnimal from "./Animales/RecepcionAnimal";
