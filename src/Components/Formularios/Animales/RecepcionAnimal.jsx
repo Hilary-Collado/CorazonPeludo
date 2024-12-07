@@ -7,18 +7,21 @@ import '../../../App.css';
 
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
-// import CardMedio from "../CardMedio";
+import CardMedio from "../CardMedio";
 import CardBase from "../CardBase";
 
-const RecepcionAnimal = () => {
+const RecepcionAnimal =  () => {
+    // const { title, nombre, animal } = titulo  
+    
     const [titulo, setTitulo] = useState({
         title: "Ingreso de Animales",
     })
     
     const { title } = titulo
+    
     return (
         <>
-            <HeaderAdmin />
+            <HeaderAdmin />  
             <Aside />
             <main id="main" className="main">
                 <CardBase titulo={titulo} />

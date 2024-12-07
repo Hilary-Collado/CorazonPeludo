@@ -17,13 +17,15 @@ import Footer from './Components/Footer/Footer';
 import RegistroSolicitudRescate from './Components/Formularios/Rescate/RegistroSolicitudRescate';
 import Aside from './Components/Menu/Aside/Aside';
 import CardMedio from './Components/Formularios/CardMedio';
+import RegistroAlimento from './Components/Formularios/Almacen/RegistroAlimento';
 
 function App() {
   return (
     <>
-    <CardMedio/>
+    <RegistroAlimento/>
+    {/* <CardMedio/> */}
     {/* <Aside/> */}
-    <RecepcionAnimal/>
+    {/* <RecepcionAnimal/> */}
     {/* <RegistroSolicitudRescate/> */}
     {/* <Cirugia/> */}
     {/* <Footer/> */}
