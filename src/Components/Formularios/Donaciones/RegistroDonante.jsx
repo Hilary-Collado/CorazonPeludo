@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Save from "../../Buttons/Save";
 import Cancel from "../../Buttons/Cancel";
 import Clear from "../../Buttons/Clear";
-import Footer from "../../Footer/Footer";
 import Close from "../../Buttons/Close";
+import '../../../App.css';
+import '../../../App.scss';
+
+
+import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
+import Aside from "../../Menu/Aside/Aside";
+import PageTitle from "../PageTitle";
 
 const RegistroDonante = () => {
-    const [titulo, setTitulo] = useState({
-        title: "Ingreso de Animales",
+    const [registroDonante, setRegistroDonante] = useState({
+        title: "Ingreso de donante",
+        donantePersona: "ingreso de persona como donante",
+        donanteEmpresa: "ingreso de empresa como donante",
     })
 
-    const { title } = titulo
+    const { title, donantePersona, donanteEmpresa } = registroDonante
 
     return (
         <>
             <HeaderAdmin />
             <Aside />
             <main id="main" className="main">
-                <PageTitle titulo={titulo} />
+                <PageTitle titulo={registroDonante} />
                 <section className="section">
                     <div className="row">
                         <div className="col-lg-12">
@@ -52,15 +60,11 @@ const RegistroDonante = () => {
                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div className="modal-dialog modal-xl">
                                                 <div className="modal-content">
-                                                    <div className="modal-header">
-
-                                                        <h5 className="modal-title">Registro de Donante <i
-                                                            className="ri-arrow-drop-right-line"></i> Persona</h5>
-
-                                                        <button type="button" className="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
+                                                    
+                                                    <div className="modal-header btnClose">
+                                                        <h5 className="card-title titulo">{donantePersona}</h5>
+                                                        <Close/>
                                                     </div>
-
 
                                                     <div className="modal-body">
                                                         <div className="card cardDonante">
@@ -223,17 +227,9 @@ const RegistroDonante = () => {
                                                     </div>
 
                                                     <div className="modal-footer">
-                                                        {/* <button type="submit"
-                                    className="btn btn-primary buttonSubmit">Enviar</button>
-                                <button type="reset"
-                                    className="btn btn-outline-danger buttonSubmit">Limpiar</button>
-                                <button type="button" className="btn btn-outline-dark"
-                                    data-bs-dismiss="modal">Close</button> */}
-
                                                         <div className="text-center  mb-3">
                                                             <Save />
                                                             <Clear />
-                                                            <Close />
                                                             <Cancel />
                                                         </div>
                                                     </div>
@@ -248,17 +244,14 @@ const RegistroDonante = () => {
                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div className="modal-dialog modal-lg">
                                                 <div className="modal-content">
-                                                    <div className="modal-header">
+                                                    <div className="modal-header btnClose">
+                                                        <h5 className="card-title titulo">{donanteEmpresa}</h5>
 
-                                                        <h5 className="modal-title">Registro de Donante <i
-                                                            className="ri-arrow-drop-right-line"></i> Empresa</h5>
-
-                                                        <button type="button" className="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
+                                                        <Close/>
                                                     </div>
                                                     <div className="modal-body">
-
                                                         <div className="card cardDonante">
+
                                                             <form className="needs-validation" id="form" novalidate>
 
                                                                 <div className="row mb-3">
@@ -365,7 +358,7 @@ const RegistroDonante = () => {
                                                         <div className="text-center  mb-3">
                                                             <Save />
                                                             <Clear />
-                                                            <Cancel />
+                                                            <Cancel  />
                                                         </div>
                                                     </div>
 

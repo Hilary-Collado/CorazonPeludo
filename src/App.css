@@ -45,12 +45,6 @@
 /*--------------------------------------------------------------
 # Mio
 --------------------------------------------------------------*/
-.titulo{
-   /* text-transform: uppercase; */
-   text-transform: capitalize;
-}
-
-
 
 /*--------------------------------------------------------------
 # General
@@ -309,7 +303,7 @@ h6 {
 
 /* Close Button */
 .btn-close {
-  background-size: 25%;
+  background-size: 5%;
 }
 
 .btn-close:focus {

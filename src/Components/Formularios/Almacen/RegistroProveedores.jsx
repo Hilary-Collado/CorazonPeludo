@@ -7,6 +7,7 @@ import PageTitle from "../PageTitle";
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
 import '../../../App.css';
+import '../../../App.scss';
 
 
 

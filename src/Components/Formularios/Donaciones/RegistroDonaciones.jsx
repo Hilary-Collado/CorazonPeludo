@@ -5,6 +5,9 @@ import Clear from "../../Buttons/Clear";
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
 import PageTitle from "../PageTitle";
+import '../../../App.css';
+import '../../../App.scss';
+
 
 const RegistroDonaciones = () => {
     const [registroDonaciones, setRegistroDonaciones] = useState({

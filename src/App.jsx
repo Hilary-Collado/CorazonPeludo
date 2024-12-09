@@ -27,7 +27,7 @@ import RegistroDonaciones from './Components/Formularios/Donaciones/RegistroDona
 function App() {
   return (
     <>
-    <RegistroDonaciones/>
+    <RegistroDonante/>
   
     </>
   )

@@ -7,6 +7,10 @@ import PageTitle from "../PageTitle";
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
 
+import '../../../App.scss';
+import '../../../App.css';
+
+
 const RegistroAlimento = () => {
     const [registroAlimento, setRegistroAlimento] = useState({
         title: "Ingreso De Alimentos",
