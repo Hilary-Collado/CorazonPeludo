@@ -23,11 +23,12 @@ import RegistroAlmacen from './Components/Formularios/Almacen/RegistroAlmacen';
 import RegistroProducto from './Components/Formularios/Almacen/RegistroProducto';
 import RegistroProveedores from './Components/Formularios/Almacen/RegistroProveedores';
 import RegistroDonaciones from './Components/Formularios/Donaciones/RegistroDonaciones';
+import RegistroCompanhia from './Components/Formularios/Empresa/RegistroCompanhia';
 
 function App() {
   return (
     <>
-    <RegistroDonante/>
+    <RegistroCompanhia/>
   
     </>
   )

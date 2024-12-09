@@ -32,7 +32,6 @@ const RegistroDonante = () => {
 
                             <div className="card">
                                 <div className="card-body">
-                                    {/* <h5 className="card-title">Ingreso De Animales</h5> */}
                                     <h5 class="card-title titulo">{title}</h5>
 
                                     {/* General Form Elements  */}
