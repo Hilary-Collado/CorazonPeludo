@@ -26,13 +26,13 @@ import RegistroProveedores from './Components/Formularios/Almacen/RegistroProvee
 function App() {
   return (
     <>
-    <RegistroProveedores />
+    {/* <RegistroProveedores /> */}
 {/* <RegistroProducto/> */}
     {/* <RegistroAlimento/> */}
 
     {/* <CardMedio/> */}
     {/* <Aside/> */}
-    {/* <RecepcionAnimal/> */}
+    <RecepcionAnimal/>
     {/* <RegistroSolicitudRescate/> */}
     {/* <Cirugia/> */}
     {/* <Footer/> */}

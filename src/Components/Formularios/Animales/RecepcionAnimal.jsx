@@ -2,33 +2,32 @@ import React, { useState } from "react";
 import Save from "../../Buttons/Save";
 import Cancel from "../../Buttons/Cancel";
 import Clear from "../../Buttons/Clear";
-import '../../Buttons/Buttons.scss';
 import '../../../App.css';
 
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
 import PageTitle from "../PageTitle";
 
-const RecepcionAnimal =  () => {
-    const [titulo, setTitulo] = useState({
+const RecepcionAnimal = () => {
+    const [recepcionAnimal, setRecepcionAnimal] = useState({
         title: "Ingreso de Animales",
     })
-    
-    const { title } = titulo
-    
+
+    const { title } = recepcionAnimal
+
     return (
         <>
-            <HeaderAdmin />  
+            <HeaderAdmin />
             <Aside />
             <main id="main" className="main">
-                <PageTitle titulo={titulo} />
+                <PageTitle titulo={recepcionAnimal} />
                 <section className="section">
                     <div className="row">
                         <div className="col-lg-12">
 
                             <div className="card">
                                 <div className="card-body">
-                                    {/* <h5 className="card-title">Ingreso De Animales</h5> */}
+
                                     <h5 class="card-title titulo">{title}</h5>
 
                                     <form action="" id="form">
