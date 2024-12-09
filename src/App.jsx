@@ -22,20 +22,13 @@ import RegistroSolicitudAdopcion from './Components/Formularios/Adopcion/Registr
 import RegistroAlmacen from './Components/Formularios/Almacen/RegistroAlmacen';
 import RegistroProducto from './Components/Formularios/Almacen/RegistroProducto';
 import RegistroProveedores from './Components/Formularios/Almacen/RegistroProveedores';
+import RegistroDonaciones from './Components/Formularios/Donaciones/RegistroDonaciones';
 
 function App() {
   return (
     <>
-    {/* <RegistroProveedores /> */}
-{/* <RegistroProducto/> */}
-    {/* <RegistroAlimento/> */}
-
-    {/* <CardMedio/> */}
-    {/* <Aside/> */}
-    <RecepcionAnimal/>
-    {/* <RegistroSolicitudRescate/> */}
-    {/* <Cirugia/> */}
-    {/* <Footer/> */}
+    <RegistroDonaciones/>
+  
     </>
   )
 }

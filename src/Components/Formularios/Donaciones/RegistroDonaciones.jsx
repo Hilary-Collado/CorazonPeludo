@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Save from "../../Buttons/Save";
 import Cancel from "../../Buttons/Cancel";
 import Clear from "../../Buttons/Clear";
+import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
+import Aside from "../../Menu/Aside/Aside";
+import PageTitle from "../PageTitle";
 
 const RegistroDonaciones = () => {
     const [registroDonaciones, setRegistroDonaciones] = useState({
-        title: "Ingreso de Animales",
+        title: "Ingreso de donaciones",
     })
 
     const { title } = registroDonaciones
@@ -75,3 +78,5 @@ const RegistroDonaciones = () => {
         </>
     )
 }
+
+export default RegistroDonaciones
