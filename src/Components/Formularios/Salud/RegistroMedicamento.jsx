@@ -9,6 +9,9 @@ import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
 import PageTitle from "../PageTitle";
 
+import Status from "../../ComponentesRepetitivos/Status";
+import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
+
 const RegistroMedicamento = () => {
     const [registroMedicamento, setRegistroMedicamento] = useState({
         title: "registro de complicaciones",
@@ -92,19 +95,9 @@ const RegistroMedicamento = () => {
 
                                         </div>
 
-                                        <div class="row mb-4">
-                                            <div class="col-md-6 mb-3">
-                                                <label for="status" class="form-label">Status</label>
-                                                <select id="status" class="form-select" required>
-                                                    <option value="" disabled selected>Selecciona Una Opcion...</option>
-                                                    <option value="1">Activo</option>
-                                                    <option value="0">Inactivo</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="fechaModificacion" class="form-label">Fecha De Modificacion</label>
-                                                <input type="date" id="fechaModificacion" class="form-control" disabled />
-                                            </div>
+                                        <div className="row mb-5">
+                                            <Status />
+                                            <FechaModificacion />
                                         </div>
 
                                         <div className="text-center  mb-3">

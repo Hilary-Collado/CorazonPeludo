@@ -9,6 +9,9 @@ import PageTitle from "../PageTitle";
 import '../../../App.scss';
 import '../../../App.css';
 
+import Status from "../../ComponentesRepetitivos/Status";
+import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
+
 const RegistroSolicitudAdopcion = () => {
     const [registroSolicitudAdopcion, setRegistroSolicitudAdopcion] = useState({
         title: "Registro de Solicitud de Adopcion",
@@ -253,19 +256,9 @@ const RegistroSolicitudAdopcion = () => {
                                         </div>
 
 
-                                        <div class="row mb-5">
-                                            <div class="col-md-6 mb-3">
-                                                <label for="status" class="form-label">Status</label>
-                                                <select id="status" class="form-select" required>
-                                                    <option value="" disabled selected>Selecciona Una Opcion...</option>
-                                                    <option value="1">Activo</option>
-                                                    <option value="0">Inactivo</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="fechaModificacion" class="form-label">Fecha de Modificacion</label>
-                                                <input type="date" id="fechaModificacion" class="form-control" disabled />
-                                            </div>
+                                        <div className="row mb-5">
+                                            <Status />
+                                            <FechaModificacion />
                                         </div>
 
                                         <div className="text-center  mb-3">

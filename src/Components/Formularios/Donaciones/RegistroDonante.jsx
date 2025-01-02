@@ -59,10 +59,10 @@ const RegistroDonante = () => {
                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div className="modal-dialog modal-xl">
                                                 <div className="modal-content">
-                                                    
+
                                                     <div className="modal-header btnClose">
                                                         <h5 className="card-title titulo">{donantePersona}</h5>
-                                                        <Close/>
+                                                        <Close />
                                                     </div>
 
                                                     <div className="modal-body">
@@ -201,22 +201,9 @@ const RegistroDonante = () => {
 
 
                                                                 <div className="row mb-5">
-                                                                    <div className="col-md-6 mb-3">
-                                                                        <label for="mySelect" className="form-label">Status</label>
-                                                                        <select id="mySelect" className="form-select" required>
-                                                                            <option value="" disabled selected>Selecciona Una Opcion...</option>
-                                                                            <option value="1">Activo</option>
-                                                                            <option value="0">Inactivo</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div className="col-md-6">
-                                                                        <label for="registro-donante-fechaModificacion"
-                                                                            className="form-label">Fecha de Modificacion</label>
-                                                                        <input type="date" id="registro-donante-fechaModificacion" className="form-control" disabled />
-                                                                    </div>
+                                                                    <Status />
+                                                                    <FechaModificacion />
                                                                 </div>
-
-
 
 
                                                             </form>
@@ -246,7 +233,7 @@ const RegistroDonante = () => {
                                                     <div className="modal-header btnClose">
                                                         <h5 className="card-title titulo">{donanteEmpresa}</h5>
 
-                                                        <Close/>
+                                                        <Close />
                                                     </div>
                                                     <div className="modal-body">
                                                         <div className="card cardDonante">
@@ -357,7 +344,7 @@ const RegistroDonante = () => {
                                                         <div className="text-center  mb-3">
                                                             <Save />
                                                             <Clear />
-                                                            <Cancel  />
+                                                            <Cancel />
                                                         </div>
                                                     </div>
 

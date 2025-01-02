@@ -10,6 +10,9 @@ import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
 import PageTitle from "../PageTitle";
 
+import Status from "../../ComponentesRepetitivos/Status";
+import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
+
 const Cirugia = () => {
     const [cirugia, setCirugia] = useState({
         title: "cirugia",
@@ -137,6 +140,11 @@ const Cirugia = () => {
                                                 <label for="diagnosticoPostoperatorio" className="form-label">Diagnóstico Postoperatorio</label>
                                                 <input type="text" className="form-control" id="diagnosticoPostoperatorio" />
                                             </div>
+                                        </div>
+
+                                        <div className="row mb-5">
+                                            <Status />
+                                            <FechaModificacion />
                                         </div>
 
                                         <div className="text-center  mb-3">

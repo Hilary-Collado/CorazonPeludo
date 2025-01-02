@@ -7,8 +7,8 @@ import Aside from "../../Menu/Aside/Aside";
 import PageTitle from "../PageTitle";
 import '../../../App.css';
 import '../../../App.scss';
-import Status from "../../Status/Status";
-import FechaModificacion from "../../Status/FechaModificacion";
+import Status from "../../ComponentesRepetitivos/Status";
+import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
 
 
 const RegistroTarea = () => {

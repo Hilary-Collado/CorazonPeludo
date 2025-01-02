@@ -10,6 +10,9 @@ import Aside from "../../Menu/Aside/Aside";
 import '../../../App.scss';
 import '../../../App.css';
 
+import Status from "../../ComponentesRepetitivos/Status";
+import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
+
 
 const RegistroAlimento = () => {
     const [registroAlimento, setRegistroAlimento] = useState({
@@ -31,7 +34,7 @@ const RegistroAlimento = () => {
                             <div className="card">
                                 <div className="card-body">
                                     <h5 class="card-title titulo">{title}</h5>
- 
+
                                     <form class="needs-validation" id="form" novalidate>
 
                                         <div class="row mb-3">
@@ -102,19 +105,9 @@ const RegistroAlimento = () => {
 
                                         </div>
 
-                                        <div class="row mb-5">
-                                            <div class="col-md-6 mb-3">
-                                                <label for="status" class="form-label">Status</label>
-                                                <select id="status" class="form-select" required>
-                                                    <option value="" disabled selected>Selecciona Una Opcion...</option>
-                                                    <option value="1">Activo</option>
-                                                    <option value="0">Inactivo</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="fechaModificacion" class="form-label">Fecha de Modificacion</label>
-                                                <input type="date" id="fechaModificacion" class="form-control" disabled />
-                                            </div>
+                                        <div className="row mb-5">
+                                            <Status />
+                                            <FechaModificacion />
                                         </div>
 
                                         <div className="text-center  mb-3">

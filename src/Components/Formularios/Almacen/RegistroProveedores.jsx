@@ -20,33 +20,33 @@ const RegistroProveedores = () => {
 
     const mostrarCampos = () => {
         if (document.getElementById("persona").checked) {
-          document.getElementById("campoCedula").style.display = "block";
-          document.getElementById("campodoc").style.display = "block";
-          document.getElementById("campoNombre").style.display = "block";
-          document.getElementById("campoApellido").style.display = "block";
-          document.getElementById("campoGenero").style.display = "block";
-          document.getElementById("campoFechaN").style.display = "block";
-      
-          document.getElementById("campoRNC").style.display = "none";
-          document.getElementById("campoNombreCompania").style.display = "none";
-          document.getElementById("campoPersonaContacto").style.display = "none";
-          document.getElementById("campoCargo").style.display = "none";
-      
+            document.getElementById("campoCedula").style.display = "block";
+            document.getElementById("campodoc").style.display = "block";
+            document.getElementById("campoNombre").style.display = "block";
+            document.getElementById("campoApellido").style.display = "block";
+            document.getElementById("campoGenero").style.display = "block";
+            document.getElementById("campoFechaN").style.display = "block";
+
+            document.getElementById("campoRNC").style.display = "none";
+            document.getElementById("campoNombreCompania").style.display = "none";
+            document.getElementById("campoPersonaContacto").style.display = "none";
+            document.getElementById("campoCargo").style.display = "none";
+
         } else if (document.getElementById("compania").checked) {
-          document.getElementById("campoCedula").style.display = "none";
-          document.getElementById("campodoc").style.display = "none";
-          document.getElementById("campoNombre").style.display = "none";
-          document.getElementById("campoApellido").style.display = "none";
-          document.getElementById("campoGenero").style.display = "none";
-          document.getElementById("campoFechaN").style.display = "none";
-      
-          document.getElementById("campoRNC").style.display = "block";
-          document.getElementById("campoNombreCompania").style.display = "block";
-          document.getElementById("campoPersonaContacto").style.display = "block";
-          document.getElementById("campoCargo").style.display = "block";
-      
+            document.getElementById("campoCedula").style.display = "none";
+            document.getElementById("campodoc").style.display = "none";
+            document.getElementById("campoNombre").style.display = "none";
+            document.getElementById("campoApellido").style.display = "none";
+            document.getElementById("campoGenero").style.display = "none";
+            document.getElementById("campoFechaN").style.display = "none";
+
+            document.getElementById("campoRNC").style.display = "block";
+            document.getElementById("campoNombreCompania").style.display = "block";
+            document.getElementById("campoPersonaContacto").style.display = "block";
+            document.getElementById("campoCargo").style.display = "block";
+
         }
-      }  
+    }
 
     return (
         <>
@@ -75,12 +75,12 @@ const RegistroProveedores = () => {
                                                 <div class="col-sm-10">
                                                     <div class="form-check form-check-inline">
                                                         <input class="form-check-input" type="radio" name="tipoProveedor" id="persona" value="persona" onClick={mostrarCampos} checked />
-                                                        <label class="form-check-label"  for="persona">
+                                                        <label class="form-check-label" for="persona">
                                                             Persona
                                                         </label>
                                                     </div>
 
-                                                    <div class="form-check form-check-inline"> 
+                                                    <div class="form-check form-check-inline">
                                                         <input class="form-check-input" type="radio" name="tipoProveedor" id="compania" value="compania" onClick={mostrarCampos} />
                                                         <label class="form-check-label" for="compania">
                                                             Compañia
@@ -107,12 +107,12 @@ const RegistroProveedores = () => {
                                         <div class="row mb-3">
                                             <div class="col-md-6  mb-3" id="campoNombreCompania">
                                                 <label for="nombreCompania" class="form-label">Nombre de la Compañia</label>
-                                                <input type="text" class="form-control" id="nombreCompania" required/>
+                                                <input type="text" class="form-control" id="nombreCompania" required />
                                             </div>
 
                                             <div class="col-md-6" id="campoRNC">
                                                 <label for="rnc" class="form-label">RNC</label>
-                                                <input type="text" class="form-control" id="rnc" required/>
+                                                <input type="text" class="form-control" id="rnc" required />
                                             </div>
                                         </div>
 
@@ -177,16 +177,16 @@ const RegistroProveedores = () => {
                                         <div class="row mb-3">
                                             <div class="col-md-6 mb-3">
                                                 <label for="telefono" class="form-label">Numero de Telefono</label>
-                                                <input type="number" class="form-control" id="telefono" required/>
+                                                <input type="number" class="form-control" id="telefono" required />
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label for="email" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="email" required/>
+                                                <input type="email" class="form-control" id="email" required />
                                             </div>
 
                                         </div>
-{/* 
+                                        {/* 
                                         <div class="row mb-3">
                                             <div class="col-md-6 mb-3" id="campoPersonaContacto" style="display: none;">
                                                 <label for="personaContacto" class="form-label">Persona de Contacto</label>
@@ -204,26 +204,16 @@ const RegistroProveedores = () => {
 
                                             <div class="col-md-6">
                                                 <label for="tipoCredito" class="form-label">Tipo de Credito</label>
-                                                <input type="text" class="form-control" id="tipoCredito" required/>
+                                                <input type="text" class="form-control" id="tipoCredito" required />
                                             </div>
 
                                         </div>
 
 
 
-                                        <div class="row mb-5">
-                                            <div class="col-md-6 mb-3">
-                                                <label for="status" class="form-label">Status</label>
-                                                <select id="status" class="form-select" required>
-                                                    <option value="" disabled selected>Selecciona Una Opcion...</option>
-                                                    <option value="1">Activo</option>
-                                                    <option value="0">Inactivo</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="fechaModificacion" class="form-label">Fecha de Modificacion</label>
-                                                <input type="date" id="fechaModificacion" class="form-control" disabled/>
-                                            </div>
+                                        <div className="row mb-5">
+                                            <Status />
+                                            <FechaModificacion />
                                         </div>
 
                                         <div className="text-center  mb-3">

@@ -31,7 +31,7 @@ import RegistroComplejidad from './Components/Formularios/Enums/RegistroCompleji
 function App() {
   return (
     <>
-    <RegistroTarea/>
+    <Cirugia/>
   
     </>
   )

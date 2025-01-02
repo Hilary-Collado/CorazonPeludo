@@ -144,20 +144,10 @@ const RegistroSolicitudRescate = () => {
                       </div>
                     </div>
 
-                    <div class="row mb-5">
-                      <div class="col-md-6 mb-3">
-                        <label for="status" class="form-label">Status</label>
-                        <select id="status" class="form-select" required>
-                          <option value="" disabled selected>Selecciona Una Opcion...</option>
-                          <option value="1">Activo</option>
-                          <option value="0">Inactivo</option>
-                        </select>
-                      </div>
-                      <div class="col-md-6">
-                        <label for="fechaModificacion" class="form-label">Fecha de Modificacion</label>
-                        <input type="date" id="fechaModificacion" class="form-control" disabled />
-                      </div>
-                    </div>
+                    <div className="row mb-5">
+                                            <Status />
+                                            <FechaModificacion />
+                                        </div>
 
                     <div className="text-center  mb-3">
                       <Save />

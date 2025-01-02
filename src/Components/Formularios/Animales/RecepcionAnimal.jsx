@@ -159,18 +159,8 @@ const RecepcionAnimal = () => {
 
 
                                         <div className="row mb-5">
-                                            <div className="col-md-6 mb-3">
-                                                <label for="status" className="form-label">Status</label>
-                                                <select id="status" className="form-select"  >
-                                                    <option value="" disabled selected>Selecciona Una Opcion...</option>
-                                                    <option value="1">Activo</option>
-                                                    <option value="0">Inactivo</option>
-                                                </select>
-                                            </div>
-                                            <div className="col-md-6">
-                                                <label for="fechaModificacion" className="form-label">Fecha de Modificacion</label>
-                                                <input type="date" id="fechaModificacion" className="form-control" disabled />
-                                            </div>
+                                            <Status />
+                                            <FechaModificacion />
                                         </div>
 
 
