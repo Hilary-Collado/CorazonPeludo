@@ -1,33 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import Save from "../../Buttons/Save";
 import Cancel from "../../Buttons/Cancel";
 import Clear from "../../Buttons/Clear";
-import Footer from "../../Footer/Footer";
+import '../../../App.css';
+import '../../../App.scss';
+
+import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
+import Aside from "../../Menu/Aside/Aside";
+import PageTitle from "../PageTitle";
 
 const RegistroSintoma = () => {
+    const [registroSintoma, setRegistroSintoma] = useState({
+        title: "registro de complicaciones",
+    })
+
+    const { title } = registroSintoma
+
     return (
         <>
-            <main id="main" class="main">
+            <HeaderAdmin />
+            <Aside />
 
-                <div class="pagetitle">
-                    <h1>Registro de síntoma</h1>
-                    <nav>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item">Formularios</li>
-                            <li class="breadcrumb-item active">Registro síntoma</li>
-                        </ol>
-                    </nav>
-                </div>
-                {/* <!-- End Page Title --> */}
+            <main id="main" className="main">
 
-                <section class="section">
-                    <div class="row">
-                        <div class="col-lg-12">
+                <PageTitle titulo={registroSintoma} />
 
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Registro de Síntomas</h5>
+                <section className="section">
+                    <div className="row">
+                        <div className="col-lg-12">
+
+                            <div className="card">
+                                <div className="card-body">
+                                    <h5 class="card-title titulo">{title}</h5>
 
                                     {/* <!-- General Form Elements --> */}
                                     <form class="needs-validation" id="form" novalidate>

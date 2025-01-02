@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Save from "../../Buttons/Save";
 import Cancel from "../../Buttons/Cancel";
 import Clear from "../../Buttons/Clear";
-import Footer from "../../Footer/Footer";
-import Aside from "../../Menu/Aside/Aside";
+
+import '../../../App.css';
+import '../../../App.scss';
+
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
+import Aside from "../../Menu/Aside/Aside";
+import PageTitle from "../PageTitle";
 
 const Cirugia = () => {
+    const [cirugia, setCirugia] = useState({
+        title: "cirugia",
+    })
+
+    const { title } = cirugia
+
     return (
         <>
             <HeaderAdmin />
@@ -14,17 +24,7 @@ const Cirugia = () => {
 
             <main id="main" className="main">
 
-                <div className="pagetitle">
-                    <h1>Registro de Cirugía</h1>
-                    <nav>
-                        <ol className="breadcrumb">
-                            <li className="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li className="breadcrumb-item">Formularios</li>
-                            <li className="breadcrumb-item active">Registro de Cirugía</li>
-                        </ol>
-                    </nav>
-                </div>
-                {/* <!-- End Page Title --> */}
+                <PageTitle titulo={cirugia} />
 
                 <section className="section">
                     <div className="row">
@@ -32,7 +32,7 @@ const Cirugia = () => {
 
                             <div className="card">
                                 <div className="card-body">
-                                    <h5 className="card-title">Ingreso de Cirugía</h5>
+                                    <h5 class="card-title titulo">{title}</h5>
 
                                     {/* <!-- General Form Elements --> */}
                                     <form className="needs-validation" id="form" novalidate>

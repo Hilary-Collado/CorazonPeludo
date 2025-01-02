@@ -1,33 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import Save from "../../Buttons/Save";
 import Cancel from "../../Buttons/Cancel";
 import Clear from "../../Buttons/Clear";
-import Footer from "../../Footer/Footer";
+import '../../../App.css';
+import '../../../App.scss';
+
+import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
+import Aside from "../../Menu/Aside/Aside";
+import PageTitle from "../PageTitle";
 
 const RegistroMedicamento = () => {
+    const [registroMedicamento, setRegistroMedicamento] = useState({
+        title: "registro de complicaciones",
+    })
+
+    const { title } = registroMedicamento
+
     return (
         <>
-            <main id="main" class="main">
+            <HeaderAdmin />
+            <Aside />
 
-                <div class="pagetitle">
-                    <h1>Registro de Medicamento</h1>
-                    <nav>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item">Formularios</li>
-                            <li class="breadcrumb-item active">Registro de medicamento</li>
-                        </ol>
-                    </nav>
-                </div>
-                {/* <!-- End Page Title --> */}
+            <main id="main" className="main">
 
-                <section class="section">
-                    <div class="row">
-                        <div class="col-lg-12">
+                <PageTitle titulo={registroMedicamento} />
 
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Ingreso de Medicamentos</h5>
+                <section className="section">
+                    <div className="row">
+                        <div className="col-lg-12">
+
+                            <div className="card">
+                                <div className="card-body">
+                                    <h5 class="card-title titulo">{title}</h5>
 
                                     {/* <!-- General Form Elements --> */}
                                     <form class="needs-validation" id="form" novalidate>
