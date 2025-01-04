@@ -12,13 +12,15 @@ import PageTitle from "../PageTitle";
 
 import Status from "../../ComponentesRepetitivos/Status";
 import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
+import ComboBox from "./ComboBox";
+
 
 const Cirugia = () => {
     const [cirugia, setCirugia] = useState({
-        title: "cirugia",
+        title: 'Cirugía',
+        NombreAnimal: 'Nombre del Animal'
     })
-
-    const { title } = cirugia
+    const {title, NombreAnimal} = cirugia
 
     return (
         <>
@@ -26,7 +28,6 @@ const Cirugia = () => {
             <Aside />
 
             <main id="main" className="main">
-
                 <PageTitle titulo={cirugia} />
 
                 <section className="section">
@@ -36,20 +37,31 @@ const Cirugia = () => {
                             <div className="card">
                                 <div className="card-body">
                                     <h5 class="card-title titulo">{title}</h5>
-
+                                    
                                     {/* <!-- General Form Elements --> */}
                                     <form className="needs-validation" id="form" novalidate>
-
+                                        
                                         <div className="row mb-3">
                                             <div className="col-md-6 mb-3">
                                                 <label for="idCirugia" className="form-label">ID Cirugía</label>
                                                 <input type="text" className="form-control" id="idCirugia" disabled />
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div className="row mb-3">
+                                            <div className="col-md-6 mb-3">
+                                            <label htmlFor="">{NombreAnimal}</label>
+                                                <ComboBox />
                                             </div>
                                             <div className="col-md-6">
                                                 <label for="idAnimal" className="form-label">ID Animal</label>
                                                 <input type="number" className="form-control" id="idAnimal" />
                                             </div>
                                         </div>
+
 
                                         <div className="row mb-3">
                                             <div className="col-md-6 mb-3">
@@ -58,8 +70,7 @@ const Cirugia = () => {
                                             </div>
 
                                             <div className="col-md-6">
-                                                <label for="quirofano" className="form-label">Quirófano</label>
-                                                <input type="text" className="form-control" id="quirofano" required />
+                                                < ComboBox/>
                                             </div>
                                         </div>
 
@@ -151,7 +162,7 @@ const Cirugia = () => {
                                             <Save />
                                             <Clear />
                                             <Cancel />
-                                        </div> 
+                                        </div>
 
                                     </form>
                                     {/* <!-- End General Form Elements --> */}
