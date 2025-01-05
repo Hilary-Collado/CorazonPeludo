@@ -27,12 +27,19 @@ import RegistroEmpleado from './Components/Formularios/Empresa/RegistroEmpleado'
 import RegistroSucursal from './Components/Formularios/Empresa/RegistroSucursal';
 import RegistroActividadEconomica from './Components/Formularios/Enums/RegistroActividadEconomica';
 import RegistroComplejidad from './Components/Formularios/Enums/RegistroComplejidad';
+import Selector from './Components/Formularios/Salud/Selector';
+import ComboBox from './Components/Formularios/Salud/ComboBox';
+import NombreAnimal from './Components/Formularios/Salud/NombreAnimal';
 
 function App() {
   return (
     <>
-    <Cirugia/>
-  
+      {/* <Cirugia /> */}
+       
+      <Selector />
+
+      
+      {/* <NombreAnimal/>  */}
     </>
   )
 }

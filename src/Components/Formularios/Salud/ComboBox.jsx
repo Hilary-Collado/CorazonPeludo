@@ -11,6 +11,7 @@ import {
 import { ChevronUpDownIcon } from '@heroicons/react/16/solid'
 import { CheckIcon } from '@heroicons/react/24/solid'
 
+
 const people = [
   {
     id: 1,
@@ -83,7 +84,7 @@ const ComboBox = () => {
   const filteredPeople = people.filter((person) =>
     person.name.toLowerCase().includes(searchQuery.toLowerCase())
   )
-
+  
   return (
     <Listbox value={selected} onChange={setSelected}>
       <div className="relative mt-2">
@@ -92,23 +93,27 @@ const ComboBox = () => {
             <img alt="" src={selected.avatar} className="size-5 shrink-0 rounded-full" />
             <span className="block truncate">{selected.name}</span>
           </span>
+
+          
           <ChevronUpDownIcon
             aria-hidden="true"
             className="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4"
           />
         </ListboxButton>
 
+      
+
         <ListboxOptions
           transition
           className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none data-[closed]:data-[leave]:opacity-0 data-[leave]:transition data-[leave]:duration-100 data-[leave]:ease-in sm:text-sm"
         >
-          <input
+          {/* <input
             type="text"
             placeholder="Search..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full px-3 py-2 border-b focus:outline-none"
-          />
+          /> */}
           {filteredPeople.map((person) => (
             <ListboxOption
               key={person.id}

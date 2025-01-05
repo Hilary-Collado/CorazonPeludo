@@ -18,9 +18,12 @@ import ComboBox from "./ComboBox";
 const Cirugia = () => {
     const [cirugia, setCirugia] = useState({
         title: 'Cirugía',
-        NombreAnimal: 'Nombre del Animal'
+        NombreAnimal: 'Nombre del Animal',
+        quirofano: 'Quirofano',
+        anestesista: 'Anestesista',
+        MedicoVetPrin: 'Médico Veterinario Principal',
     })
-    const {title, NombreAnimal} = cirugia
+    const {title, NombreAnimal, quirofano, anestesista, MedicoVetPrin} = cirugia
 
     return (
         <>
@@ -70,6 +73,7 @@ const Cirugia = () => {
                                             </div>
 
                                             <div className="col-md-6">
+                                                <label htmlFor="">{quirofano}</label>
                                                 < ComboBox/>
                                             </div>
                                         </div>
@@ -93,8 +97,8 @@ const Cirugia = () => {
                                             </div>
 
                                             <div className="col-md-6">
-                                                <label for="medicoPrincipal" className="form-label">Médico Veterinario Principal</label>
-                                                <input type="text" className="form-control" id="medicoPrincipal" required />
+                                                <label for="medicoPrincipal">{MedicoVetPrin}</label>
+                                                <ComboBox id="medicoPrincipal" />
                                             </div>
                                         </div>
 
@@ -102,11 +106,12 @@ const Cirugia = () => {
                                             <div className="col-md-6 mb-3">
                                                 <label for="medicosAsistentes" className="form-label">Médicos Asistentes</label>
                                                 <input type="text" className="form-control" id="medicosAsistentes" />
+                                                
                                             </div>
 
                                             <div className="col-md-6">
-                                                <label for="anestesista" className="form-label">Anestesista</label>
-                                                <input type="text" className="form-control" id="anestesista" />
+                                                <label for="anestesista" >{anestesista}</label>
+                                                <ComboBox />
                                             </div>
                                         </div>
 
@@ -118,7 +123,7 @@ const Cirugia = () => {
 
                                             <div className="col-md-6">
                                                 <label for="duracionCirugia" className="form-label">Duración de la Cirugía (minutos)</label>
-                                                <input type="number" className="form-control" id="duracionCirugia" min="0" />
+                                                <input type="number" className="form-control" id="duracionCirugia" min="0"  disabled/>
                                             </div>
                                         </div>
 
