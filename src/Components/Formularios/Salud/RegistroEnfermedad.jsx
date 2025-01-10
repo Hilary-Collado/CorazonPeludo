@@ -11,6 +11,8 @@ import PageTitle from "../PageTitle";
 
 import Status from "../../ComponentesRepetitivos/Status";
 import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
+import Selector from "./Selector";
+
 
 const RegistroEnfermedad = () => {
     const [registroEnfermedad, setRegistroEnfermedad] = useState({
@@ -53,11 +55,13 @@ const RegistroEnfermedad = () => {
                                                 <input type="text" class="form-control" id="nombre" required />
                                             </div>
                                             <div class="col-md-6">
-                                                <a href="../enums/registroTipoEnfermedad.html">Crear nueva</a>
+                                                {/* <a href="../enums/registroTipoEnfermedad.html">Crear nueva</a> */}
                                                 <label for="tipoEnfermedad" class="form-label">Tipo de Enfermedad</label>
-                                                <select id="tipoEnfermedad" class="form-select" required>
+                                                {/* <select id="tipoEnfermedad" class="form-select" required>
                                                     <div id="data-display">Selecciona Una Opcion...</div>
-                                                </select>
+                                                </select> */}
+
+                                                <Selector/>
                                             </div>
                                         </div>
 

@@ -29,16 +29,17 @@ import RegistroActividadEconomica from './Components/Formularios/Enums/RegistroA
 import RegistroComplejidad from './Components/Formularios/Enums/RegistroComplejidad';
 import Selector from './Components/Formularios/Salud/Selector';
 import ComboBox from './Components/Formularios/Salud/ComboBox';
-import NombreAnimal from './Components/Formularios/Salud/NombreAnimal';
+import RegistroEnfermedad from './Components/Formularios/Salud/RegistroEnfermedad';
+
 
 function App() {
   return (
     <>
-      <Cirugia />
-       
+      <RegistroEnfermedad />
+
       {/* <Selector /> */}
 
-      
+
       {/* <NombreAnimal/>  */}
     </>
   )
