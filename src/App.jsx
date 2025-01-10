@@ -34,9 +34,9 @@ import NombreAnimal from './Components/Formularios/Salud/NombreAnimal';
 function App() {
   return (
     <>
-      {/* <Cirugia /> */}
+      <Cirugia />
        
-      <Selector />
+      {/* <Selector /> */}
 
       
       {/* <NombreAnimal/>  */}

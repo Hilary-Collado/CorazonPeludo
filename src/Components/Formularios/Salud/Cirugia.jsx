@@ -13,9 +13,11 @@ import PageTitle from "../PageTitle";
 import Status from "../../ComponentesRepetitivos/Status";
 import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
 import ComboBox from "./ComboBox";
+import Selector from "./Selector";
 
 
 const Cirugia = () => {
+
     const [cirugia, setCirugia] = useState({
         title: 'Cirugía',
         NombreAnimal: 'Nombre del Animal',
@@ -23,7 +25,7 @@ const Cirugia = () => {
         anestesista: 'Anestesista',
         MedicoVetPrin: 'Médico Veterinario Principal',
     })
-    const {title, NombreAnimal, quirofano, anestesista, MedicoVetPrin} = cirugia
+    const { title, NombreAnimal, quirofano, anestesista, MedicoVetPrin } = cirugia
 
     return (
         <>
@@ -40,10 +42,10 @@ const Cirugia = () => {
                             <div className="card">
                                 <div className="card-body">
                                     <h5 class="card-title titulo">{title}</h5>
-                                    
+
                                     {/* <!-- General Form Elements --> */}
                                     <form className="needs-validation" id="form" novalidate>
-                                        
+
                                         <div className="row mb-3">
                                             <div className="col-md-6 mb-3">
                                                 <label for="idCirugia" className="form-label">ID Cirugía</label>
@@ -56,7 +58,7 @@ const Cirugia = () => {
 
                                         <div className="row mb-3">
                                             <div className="col-md-6 mb-3">
-                                            <label htmlFor="">{NombreAnimal}</label>
+                                                <label htmlFor="">{NombreAnimal}</label>
                                                 <ComboBox />
                                             </div>
                                             <div className="col-md-6">
@@ -74,7 +76,7 @@ const Cirugia = () => {
 
                                             <div className="col-md-6">
                                                 <label htmlFor="">{quirofano}</label>
-                                                < ComboBox/>
+                                                < ComboBox />
                                             </div>
                                         </div>
 
@@ -105,8 +107,8 @@ const Cirugia = () => {
                                         <div className="row mb-3">
                                             <div className="col-md-6 mb-3">
                                                 <label for="medicosAsistentes" className="form-label">Médicos Asistentes</label>
-                                                <input type="text" className="form-control" id="medicosAsistentes" />
-                                                
+
+                                                <Selector id="medicosAsistentes" />
                                             </div>
 
                                             <div className="col-md-6">
@@ -118,38 +120,44 @@ const Cirugia = () => {
                                         <div className="row mb-3">
                                             <div className="col-md-6 mb-3">
                                                 <label for="tipoAnestesia" className="form-label">Tipo de Anestesia</label>
-                                                <input type="text" className="form-control" id="tipoAnestesia" />
+                                                {/* <input type="text" className="form-control" id="tipoAnestesia" /> */}
+                                                <Selector id="tipoAnestesia" />
                                             </div>
 
                                             <div className="col-md-6">
                                                 <label for="duracionCirugia" className="form-label">Duración de la Cirugía (minutos)</label>
-                                                <input type="number" className="form-control" id="duracionCirugia" min="0"  disabled/>
+                                                <input type="number" className="form-control" id="duracionCirugia" min="0" disabled />
                                             </div>
                                         </div>
 
                                         <div className="row mb-3">
                                             <div className="col-md-6 mb-3">
                                                 <label for="instrumental" className="form-label">Instrumental Utilizado</label>
-                                                <input type="text" className="form-control" id="instrumental" />
+
+                                                <Selector id="instrumental" />
                                             </div>
 
                                             <div className="col-md-6">
                                                 <label for="materialConsumo" className="form-label">Material de Consumo Utilizado</label>
-                                                <input type="text" className="form-control" id="materialConsumo" />
+
+                                                <Selector id="materialConsumo" />
                                             </div>
                                         </div>
 
                                         <div className="row mb-3">
                                             <div className="col-md-6 mb-3">
                                                 <label for="complicaciones" className="form-label">Complicaciones</label>
-                                                <select id="complicaciones" className="form-select" required>
+                                                {/* <select id="complicaciones" className="form-select" required>
                                                     <option value="" disabled selected>Selecciona Una Opcion...</option>
                                                     <option value="Hemorragia">Hemorragia</option>
                                                     <option value="Infección postoperatoria">Infección postoperatoria</option>
                                                     <option value="Complicaciones anestésicas">Complicaciones anestésicas</option>
                                                     <option value="Lesión de órganos">Lesión de órganos</option>
                                                     <option value="Reacción alérgica">Reacción alérgica</option>
-                                                </select>
+                                                </select> */}
+
+                                                <Selector id="complicaciones" />
+
                                             </div>
 
                                             <div className="col-md-6">

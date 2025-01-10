@@ -1,3 +1,4 @@
+import { ClassNames } from "@emotion/react";
 import React, { Component, Fragment, useState } from "react";
 import Select from "react-select";
 import CreatableSelect from "react-select/creatable";
@@ -45,10 +46,8 @@ const Selector = () => {
   }
 
   return (
-    <Fragment>
-      <div className="col-md-6 mb-3">
+    <>
         <Select id="select"
-          className=""
           isDisabled={false}
           isLoading={false}
           isClearable={true}
@@ -58,8 +57,8 @@ const Selector = () => {
           onchange={handleChange}
           isMulti={true}
         />
-      </div>
-    </Fragment>
+
+    </>
   )
 }
 
