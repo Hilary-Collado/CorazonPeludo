@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Save from "../../Buttons/Save";
 import Cancel from "../../Buttons/Cancel";
 import Clear from "../../Buttons/Clear";
@@ -7,10 +7,11 @@ import '../../../App.scss';
 
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
-import PageTitle from "../PageTitle";
+import PageTitle from "../../ComponentesRepetitivos/PageTitle";
 
 import Status from "../../ComponentesRepetitivos/Status";
 import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
+import Selector from "../../ComponentesRepetitivos/Selector";
 
 const RegistroTratamiento = () => {
     const [registroTratamiento, setRegistroTratamiento] = useState({
@@ -53,11 +54,9 @@ const RegistroTratamiento = () => {
                                                 <input type="text" class="form-control" id="nombre" required />
                                             </div>
                                             <div class="col-md-6">
-                                                <a href="../enums/registroTipoTarea.html">Crear nueva</a>
+                                                {/* <a href="../enums/registroTipoTarea.html">Crear nueva</a> */}
                                                 <label for="tipoEnfermedad" class="form-label">Tipo de tratamiento</label>
-                                                <select id="tipoEnfermedad" class="form-select" required>
-                                                    <div id="data-display">Selecciona Una Opcion...</div>
-                                                </select>
+                                                <Selector />
                                             </div>
                                         </div>
 

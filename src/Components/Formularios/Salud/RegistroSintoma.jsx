@@ -7,14 +7,15 @@ import '../../../App.scss';
 
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
-import PageTitle from "../PageTitle";
+import PageTitle from "../../ComponentesRepetitivos/PageTitle";
 
 import Status from "../../ComponentesRepetitivos/Status";
 import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
+import Selector from "../../ComponentesRepetitivos/Selector";
 
 const RegistroSintoma = () => {
     const [registroSintoma, setRegistroSintoma] = useState({
-        title: "registro de complicaciones",
+        title: "registro de sintomas",
     })
 
     const { title } = registroSintoma
@@ -46,16 +47,14 @@ const RegistroSintoma = () => {
                                         </div>
 
                                         <div class="row mb-3">
-                                            <div class="col-md-6">
+                                            <div class="col-md-6 mb-3">
                                                 <label for="descripcion" class="form-label">Descripcion</label>
                                                 <input type="text" class="form-control" id="descripcion" required />
                                             </div>
                                             <div class="col-md-6">
-                                                <a href="../enums/registroTipoSintoma.html">Crear nuevo</a>
+                                                {/* <a href="../enums/registroTipoSintoma.html">Crear nuevo</a> */}
                                                 <label for="tipoSintoma" class="form-label">Tipo Síntomas</label>
-                                                <select id="tipoSintoma" class="form-select" required>
-                                                    <div id="data-display"></div>
-                                                </select>
+                                                <Selector />
                                             </div>
                                         </div>
 

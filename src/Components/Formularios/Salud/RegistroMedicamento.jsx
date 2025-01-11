@@ -7,14 +7,15 @@ import '../../../App.scss';
 
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
-import PageTitle from "../PageTitle";
+import PageTitle from "../../ComponentesRepetitivos/PageTitle";
 
 import Status from "../../ComponentesRepetitivos/Status";
 import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
+import Selector from "../../ComponentesRepetitivos/Selector";
 
 const RegistroMedicamento = () => {
     const [registroMedicamento, setRegistroMedicamento] = useState({
-        title: "registro de complicaciones",
+        title: "registro de medicamentos",
     })
 
     const { title } = registroMedicamento
@@ -48,10 +49,9 @@ const RegistroMedicamento = () => {
 
                                         <div class="row mb-3">
                                             <div class="col-md-6 mb-3">
-                                                <a href="../enums/registroTipoMedicamento.html">Crear nuevo</a>
+                                                {/* <a href="../enums/registroTipoMedicamento.html">Crear nuevo</a> */}
                                                 <label for="mySelect" class="form-label">Tipo de Medicamento</label>
-                                                <select id="mySelect" class="form-select" required>
-                                                </select>
+                                                <Selector />
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <label for="alias" class="form-label">Nombre</label>

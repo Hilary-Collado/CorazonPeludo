@@ -27,15 +27,18 @@ import RegistroEmpleado from './Components/Formularios/Empresa/RegistroEmpleado'
 import RegistroSucursal from './Components/Formularios/Empresa/RegistroSucursal';
 import RegistroActividadEconomica from './Components/Formularios/Enums/RegistroActividadEconomica';
 import RegistroComplejidad from './Components/Formularios/Enums/RegistroComplejidad';
-import Selector from './Components/Formularios/Salud/Selector';
-import ComboBox from './Components/Formularios/Salud/ComboBox';
+import Selector from './Components/ComponentesRepetitivos/Selector';
+import ComboBox from './Components/ComponentesRepetitivos/ComboBox';
 import RegistroEnfermedad from './Components/Formularios/Salud/RegistroEnfermedad';
+import RegistroMedicamento from './Components/Formularios/Salud/RegistroMedicamento';
+import RegistroSintoma from './Components/Formularios/Salud/RegistroSintoma';
+import RegistroTratamiento from './Components/Formularios/Salud/RegistroTratamiento';
 
 
 function App() {
   return (
     <>
-      <RegistroEnfermedad />
+      <RegistroTratamiento />
 
       {/* <Selector /> */}
 

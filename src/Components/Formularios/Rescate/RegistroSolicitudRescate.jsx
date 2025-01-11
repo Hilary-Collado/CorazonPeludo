@@ -7,7 +7,7 @@ import '../../../App.scss';
 
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
-import PageTitle from "../PageTitle";
+import PageTitle from "../../ComponentesRepetitivos/PageTitle";
 
 
 {/* HAY QUE CAMBIAR ESTE FORMULARIO PORQUE SOLICITUD DE RESCATE ES PRINCIPALMENTE DEL CLIENTE, 
