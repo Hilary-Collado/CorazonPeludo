@@ -40,7 +40,7 @@ const RegistroTarea = () => {
 
                                         <div className="row mb-3">
                                             <div className="col-md-6 mb-3">
-                                                <label for="idTareas" className="form-label">Id Tareas</label>
+                                                <label for="idTareas" className="form-label">ID Tareas</label>
                                                 <input type="text" className="form-control" id="idTareas" disabled />
                                             </div>
                                             <div className="col-md-6">

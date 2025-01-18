@@ -38,12 +38,7 @@ import RegistroTratamiento from './Components/Formularios/Salud/RegistroTratamie
 function App() {
   return (
     <>
-      <RegistroTratamiento />
-
-      {/* <Selector /> */}
-
-
-      {/* <NombreAnimal/>  */}
+      <RegistroTarea />
     </>
   )
 }
