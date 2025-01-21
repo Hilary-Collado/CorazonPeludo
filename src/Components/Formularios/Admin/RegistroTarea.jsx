@@ -9,6 +9,7 @@ import '../../../App.css';
 import '../../../App.scss';
 import Status from "../../ComponentesRepetitivos/Status";
 import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
+import Descripcion from "../../ComponentesRepetitivos/Descripcion";
 
 
 const RegistroTarea = () => {
@@ -43,10 +44,7 @@ const RegistroTarea = () => {
                                                 <label for="idTareas" className="form-label">ID Tareas</label>
                                                 <input type="text" className="form-control" id="idTareas" disabled />
                                             </div>
-                                            <div className="col-md-6">
-                                                <label for="descripcion" className="form-label">Descripción</label>
-                                                <input type="text" className="form-control" id="descripcion" required />
-                                            </div>
+                                            <Descripcion/>
                                         </div>
 
                                         <div className="row mb-3">
