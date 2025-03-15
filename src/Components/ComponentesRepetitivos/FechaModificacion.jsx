@@ -1,16 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// const getDate = () => {
-//   const MdToday = new Date();
-//   const month = MdToday.getMonth() + 1;
-//   const year = MdToday.getFullYear();
-//   const date = MdToday.getDate();
-//   //   return `${date}/${month}/${year}`;
-//   document.getElementById(
-//     "fechaModificacion"
-//   ).value = `${year}-${month}-${date}`;
-// };
-
 const FechaModificacion = () => {
   const [currentDate, setCurrentDate] = useState('');
 

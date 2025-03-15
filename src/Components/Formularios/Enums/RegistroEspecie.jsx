@@ -7,7 +7,9 @@ import '../../../App.scss';
 
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
-import PageTitle from "../PageTitle";
+import PageTitle from "../../ComponentesRepetitivos/PageTitle";
+import Status from "../../ComponentesRepetitivos/Status";
+import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
 
 const RegistroEspecie = () => {
     const [registroEspecie, setRegistroEspecie] = useState({
