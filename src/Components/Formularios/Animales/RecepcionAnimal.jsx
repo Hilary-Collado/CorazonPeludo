@@ -11,8 +11,10 @@ import PageTitle from "../../ComponentesRepetitivos/PageTitle";
 import Status from "../../ComponentesRepetitivos/Status";
 import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
 
-import EspeciesSelect from "../../ComponentesRepetitivos/CompEspeciesSelect";
-import TipoAmput from "../../ComponentesRepetitivos/TipoAmput";
+import EspeciesSelect from "../../Comp/CompEspeciesSelect";
+import TipoAmput from "../../Comp/CompTipoAmput";
+import CompOrigenAnimal from "../../Comp/CompOrigenAnimal";
+import CompSexo from "../../Comp/CompSexo";
 
 
 const RecepcionAnimal = () => {
@@ -96,27 +98,10 @@ const RecepcionAnimal = () => {
                       </div>
                     </div>
 
-                    <div className="row mb-3">
+                    <div className="row mb-3"> 
                       <div className="col-md-6 mb-3">
-                        <label for="sexo" className="form-label">
-                          Sexo
-                        </label>
-                        <select id="sexo" className="form-select">
-                          <option value="" disabled selected>
-                            Selecciona Una Opcion...
-                          </option>
-                          <option value="F">Hembra</option>
-                          <option value="M">Macho</option>
-                        </select>
-                      </div>
-
-                      {/* <div className="col-md-6">
-                                                <label for="especie" className="form-label">Especie</label>
-                                                <select id="especie" className="form-select"  >
-                                                    <div className="data-display0"></div>
-                                                </select>
-                                            </div> */}
-
+                        <CompSexo tipo={'animal'}/>
+                      </div> 
                       <div className="col-md-6">
                         <EspeciesSelect />
                       </div>
@@ -133,9 +118,9 @@ const RecepcionAnimal = () => {
                         </select>
                       </div>
                       <div className="col-md-6">
-                        <label for="origen" className="form-label">
+                        {/* <label for="origen" className="form-label">
                           Origen Del Animal
-                        </label>
+                         </label>
                         <select id="origen" className="form-select">
                           <option value="" disabled selected>
                             Selecciona Una Opcion...
@@ -143,8 +128,9 @@ const RecepcionAnimal = () => {
                           <option value="F">Nacido en el albergue</option>
                           <option value="M">Dado en adopcion</option>
                           <option value="M">Rescatado</option>
-                        </select>
-                      </div>
+                        </select>*/}    
+                      </div> 
+                      <CompOrigenAnimal/>
                     </div>
 
                     <div className="row mb-3">

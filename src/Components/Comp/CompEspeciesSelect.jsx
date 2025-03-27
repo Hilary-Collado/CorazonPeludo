@@ -11,7 +11,7 @@ const EspeciesSelect = () => {
         const response = await axios.get("http://localhost:8000/api/especie");
         setEspecies(response.data);
       } catch (error) {
-        console.error("Error al obtener los datos:", error);
+        console.error("Error al obtener los datos tabla EspeciesSelect:", error);
       }
     };
     fetchData();

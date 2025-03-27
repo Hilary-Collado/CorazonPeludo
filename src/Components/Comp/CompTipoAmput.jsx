@@ -12,7 +12,7 @@ const TipoAmputacion = () => {
           "http://localhost:8000/api/tipoAmputacion"
         );
         setAmputaciones(response.data);
-        console.log("API response in tipo de amputacion: ", response.data);
+        console.log("API response en tipo de amputacion: ", response.data);
       } catch (error) {
         console.error("Error al obtener los datos:", error);
       }

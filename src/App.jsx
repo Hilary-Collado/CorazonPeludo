@@ -34,10 +34,10 @@ import RegistroMedicamento from "./Components/Formularios/Salud/RegistroMedicame
 import RegistroSintoma from "./Components/Formularios/Salud/RegistroSintoma";
 import RegistroTratamiento from "./Components/Formularios/Salud/RegistroTratamiento";
 import RegistroEspecie from "./Components/Formularios/Enums/RegistroEspecie";
-import EspeciesSelect from "./Components/ComponentesRepetitivos/CompEspeciesSelect";
+import EspeciesSelect from "./Components/Comp/CompEspeciesSelect";
 // import tipoAmputacion from './Components/ComponentesRepetitivos/TipoAmputaciones';
 
-import TipoAmput from "./Components/ComponentesRepetitivos/TipoAmput";
+import TipoAmput from "./Components/Comp/CompTipoAmput";
 
 function App() {
   return (
