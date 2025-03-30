@@ -1,13 +1,6 @@
-.especie{
-  /* background-color: pink;
-  display: flex;
-  align-items: center; */
+.capp{
+  text-transform: capitalize;
 }
-
-.especieSelect{
-  /* width: 50%; */
-}
-
 
 
 /* #root {

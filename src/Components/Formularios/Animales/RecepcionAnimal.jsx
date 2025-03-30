@@ -4,6 +4,7 @@ import Cancel from "../../Buttons/Cancel";
 import Clear from "../../Buttons/Clear";
 import "../../../App.css";
 import "../../../App.scss";
+import axios from 'axios';
 
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
@@ -12,23 +13,83 @@ import Status from "../../ComponentesRepetitivos/Status";
 import FechaModificacion from "../../ComponentesRepetitivos/FechaModificacion";
 
 import EspeciesSelect from "../../Comp/CompEspeciesSelect";
-import TipoAmput from "../../Comp/CompTipoAmput";
+import TipoAmputacion from "../../Comp/CompTipoAmput";
 import CompOrigenAnimal from "../../Comp/CompOrigenAnimal";
 import CompSexo from "../../Comp/CompSexo";
-
+import CompTipoPiel from "../../Comp/CompTipoPiel";
+import EstadoSalud from "../../Comp/CompEstadoSalud";
 
 const RecepcionAnimal = () => {
   const [recepcionAnimal, setRecepcionAnimal] = useState({
     title: "Ingreso de Animales",
   });
 
+  const [formData, setFormData] = useState({
+    alias: "",
+    edad: "",
+    peso: "",
+    altura: "",
+    colorFisico: "",
+    colorOjos: "",
+    estatus: "1", // Activo por defecto
+    idSexo: "",
+    idOrigenAnimal: "",
+    idEstadoSalud: "",
+    idTipoPiel: "",
+    idTipoAmputaciones: "",
+    idEspecie: "",
+    amputaciones: "",
+    fechaIngreso: new Date().toISOString().split("T")[0], // Fecha de ingreso por defecto
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent the default form submission
+
+    const payload = {
+      ...formData,
+      idTipoAmputaciones: formData.amputaciones === "1" ? formData.idTipoAmputaciones : null,
+    }
+    console.log("🐾 Enviando al backend:", payload);
+
+    try {
+      if (formData.amputaciones === "1" && !formData.idTipoAmputaciones) {
+        alert("Debes seleccionar un tipo de amputación.");
+        return;
+      }
+      
+
+      const response = await axios.post("http://localhost:5000/api/animales", payload);
+
+      if(response.status === 200 || response.status === 201){
+        alert("Animal registrado correctamente");
+      }
+      else{
+        alert("Error al registrar el animal");
+      }
+    } catch (error) {
+      console.error("Error al enviar los datos:", error);
+      alert("Error al enviar los datos: " + error.message);
+      
+    }
+  }
+
+  const handleFieldChange = (field, value) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+  
+
   const { title } = recepcionAnimal;
+
+  const today = new Date().toISOString().split("T")[0];
 
   return (
     <>
       <HeaderAdmin />
       <Aside />
-      <main id="main" className="main">
+      <main id="main" className="main capp">
         <PageTitle titulo={recepcionAnimal} />
         <section className="section">
           <div className="row">
@@ -37,21 +98,7 @@ const RecepcionAnimal = () => {
                 <div className="card-body">
                   <h5 class="card-title titulo">{title}</h5>
 
-                  <form action="" id="form">
-                    <div className="row mb-3">
-                      <div className="col-md-6 mb-3">
-                        <label for="idAnimales" className="form-label">
-                          ID Animales
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="idAnimales"
-                          disabled
-                        />
-                      </div>
-                    </div>
-
+                  <form action="" id="form" onSubmit={handleSubmit}>
                     <div className="row mb-3">
                       <div className="col-md-6 mb-3">
                         <label for="alias" className="form-label">
@@ -61,6 +108,8 @@ const RecepcionAnimal = () => {
                           type="text"
                           className="form-control"
                           id="alias"
+                          value={formData.alias}
+                          onChange={(e) => setFormData({...formData, alias: e.target.value})}
                         />
                       </div>
                       <div className="col-md-6">
@@ -71,6 +120,8 @@ const RecepcionAnimal = () => {
                           type="number"
                           className="form-control"
                           id="edad"
+                          value={formData.edad}
+                          onChange={(e) => setFormData({...formData, edad: e.target.value})}
                         />
                       </div>
                     </div>
@@ -84,6 +135,8 @@ const RecepcionAnimal = () => {
                           type="number"
                           className="form-control"
                           id="peso"
+                          value={formData.peso}
+                          onChange={(e) => setFormData({...formData, peso: e.target.value})}
                         />
                       </div>
                       <div className="col-md-6">
@@ -94,83 +147,67 @@ const RecepcionAnimal = () => {
                           type="number"
                           className="form-control"
                           id="altura"
+                          value={formData.altura}
+                          onChange={(e) => setFormData({...formData, altura: e.target.value})}
                         />
-                      </div>
-                    </div>
-
-                    <div className="row mb-3"> 
-                      <div className="col-md-6 mb-3">
-                        <CompSexo tipo={'animal'}/>
-                      </div> 
-                      <div className="col-md-6">
-                        <EspeciesSelect />
                       </div>
                     </div>
 
                     <div className="row mb-3">
                       <div className="col-md-6 mb-3">
-                        {/* <a href="../enums/registroTipoPiel.html">Crear nueva</a> */}
-                        <label for="tipoPiel" className="form-label">
-                          Tipo de Piel
-                        </label>
-                        <select id="tipoPiel" className="form-select">
-                          <div className="data-display1"></div>
-                        </select>
+                        <CompSexo tipo={"animal"} onChange={(id) => handleFieldChange('idSexo', id)}/>
                       </div>
                       <div className="col-md-6">
-                        {/* <label for="origen" className="form-label">
-                          Origen Del Animal
-                         </label>
-                        <select id="origen" className="form-select">
-                          <option value="" disabled selected>
-                            Selecciona Una Opcion...
-                          </option>
-                          <option value="F">Nacido en el albergue</option>
-                          <option value="M">Dado en adopcion</option>
-                          <option value="M">Rescatado</option>
-                        </select>*/}    
-                      </div> 
-                      <CompOrigenAnimal/>
+                        <EspeciesSelect onChange={(id) => handleFieldChange('idEspecie', id)}/>
+                      </div>
+                    </div>
+
+                    <div className="row mb-3">
+                      <div className="col-md-6 mb-3">
+                        <CompTipoPiel onChange={(id) => handleFieldChange('idTipoPiel', id)}/>
+                      </div>
+                      <div className="col-md-6">
+                        <CompOrigenAnimal onChange={(id) => handleFieldChange('idOrigenAnimal', id)}/>
+                      </div>
                     </div>
 
                     <div className="row mb-3">
                       <div className="col-md-6 mb-3">
                         <label for="amputaciones" className="form-label">
-                          Amputaciones
+                        ¿Tiene amputaciones?
                         </label>
                         <select
                           id="amputaciones"
                           className="form-select"
-                          onChange="activarAmp()"
+                          value={formData.amputaciones}
+                          onChange={(e) => {
+                            const valor = e.target.value;
+                            setFormData((prev) => ({
+                              ...prev,
+                              amputaciones: valor,
+                              idTipoAmputaciones: valor === "1" ? formData.idTipoAmputaciones: null
+                            }));
+                          }}
                         >
-                          <option value="" disabled selected>
+                          <option value="" disabled>
                             Selecciona Una Opcion...
                           </option>
-                          <option value="si">Si</option>
-                          <option value="no">No</option>
+                          <option value="1">Si</option>
+                          <option value="0">No</option>
                         </select>
                       </div>
 
-
                       <div className="col-md-6">
-                        <TipoAmput/>
+                        <TipoAmputacion
+                        onChange={(id) => handleFieldChange("idTipoAmputaciones", id)}
+                          disabled = {formData.amputaciones !== '1'} 
+                          value={formData.idTipoAmputaciones || ""}/>
                       </div>
                     </div>
 
                     <div className="row mb-3">
                       <div className="col-md-6 mb-3">
-                        <label for="estado" className="form-label">
-                          Estado de Salud del Animal
-                        </label>
-                        <select id="estado" className="form-select">
-                          <option value="" disabled selected>
-                            Selecciona Una Opcion...
-                          </option>
-                          <option value="saludable">Saludable</option>
-                          <option value="enfermo">Enfermo</option>
-                          <option value="desorientado">Desorientado</option>
-                          <option value="agresivo">Agresivo</option>
-                        </select>
+                        <EstadoSalud onChange={(id) => handleFieldChange("idEstadoSalud", id)}/>
                       </div>
                       <div className="col-md-6">
                         <label for="fechaIngreso" className="form-label">
@@ -180,6 +217,9 @@ const RecepcionAnimal = () => {
                           type="date"
                           id="fechaIngreso"
                           className="form-control"
+                          defaultValue={today}
+                          value={formData.fechaIngreso}
+                          onChange={(e) => handleFieldChange("fechaIngreso", e.target.value)}  
                         />
                       </div>
                     </div>
@@ -194,6 +234,8 @@ const RecepcionAnimal = () => {
                           className="form-control"
                           id="colorFisico"
                           placeholder="Ejemplo: Blanco con manchas negras"
+                          value={formData.colorFisico}
+                          onChange={(e) => setFormData({...formData, colorFisico: e.target.value})}
                         />
                       </div>
                       <div className="col-md-6">
@@ -205,17 +247,19 @@ const RecepcionAnimal = () => {
                           className="form-control"
                           id="colorOjos"
                           placeholder="Ejemplo: Azules"
+                          value={formData.colorOjos}
+                          onChange={(e) => setFormData({...formData, colorOjos: e.target.value})}
                         />
                       </div>
                     </div>
 
                     <div className="row mb-5">
-                      <Status />
+                      <Status value={formData.estatus} onChange={(val) => handleFieldChange("estatus", val)}/>
                       <FechaModificacion />
                     </div>
 
                     <div className="text-center  mb-3">
-                      <Save />
+                      <Save onClick={handleSubmit}/>
                       <Clear />
                       <Cancel />
                     </div>
@@ -231,3 +275,10 @@ const RecepcionAnimal = () => {
 };
 
 export default RecepcionAnimal;
+
+
+
+
+// alias,edad, peso, altura, idSexo,idEspecie,idTipoPiel,idOrigenAnimal,amputaciones,idTipoAmputaciones,idEstadoSalud,fechaIngreso,colorFisico,colorOjos,estatus,
+
+// @alias, @edad, @peso, @altura, @idSexo, @idEspecie @idTipoPiel, @idOrigenAnimal, @amputaciones, @idTipoAmputaciones @idEstadoSalud, @fechaIngreso, @colorFisico, @colorOjos, @estatus,

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../App.css";
 import axios from "axios";
 
-const CompSexo = ({tipo}) => {
+const CompSexo = ({tipo, onChange}) => {
   const [sexos, setSexos] = useState([]);
 
   useEffect(() => {
@@ -10,7 +10,6 @@ const CompSexo = ({tipo}) => {
       try {
         const response = await axios.get("http://localhost:8000/api/genero");
         setSexos(response.data);
-        console.log("API response en sexo: ", response.data);
       } catch (error) {
         console.error("Error al obtener los datos tabla sexo:", error);
       }
@@ -24,15 +23,21 @@ const CompSexo = ({tipo}) => {
       : sexo.descripcion === "Macho" || sexo.descripcion === "Hembra"
   );
 
+  const handleSelectChange = (e) => {
+    const selectedId = parseInt(e.target.value);
+    console.log("🔍 ID seleccionado (sexo):", selectedId); // 👈 Agrega esto
+    onChange(selectedId); // Enviamos el id al componente padre
+  }; 
+
   return (
     <>
       <label htmlFor="sexo" className="form-label">
         Sexo
       </label>
-      <select className="form-select" id="sexo">
-        <option value="">Seleccione un sexo</option>
-        {opcionesFiltradas.map((sexo, index) => (
-          <option key={index} value={sexo.descripcion}>
+      <select className="form-select" id="sexo" onChange={handleSelectChange}>
+        <option value="">Seleccione una opcion</option>
+        {opcionesFiltradas.map((sexo) => (
+          <option key={sexo.idSexo} value={sexo.idSexo}>
             {sexo.descripcion}
           </option>
         ))}

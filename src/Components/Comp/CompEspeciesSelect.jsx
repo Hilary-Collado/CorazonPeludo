@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../../App.css";
 
-const EspeciesSelect = () => {
+const EspeciesSelect = ({ onChange }) => {
   const [especies, setEspecies] = useState([]);
 
   useEffect(() => {
@@ -17,25 +17,27 @@ const EspeciesSelect = () => {
     fetchData();
   }, []);
 
+  const handleSelectChange = (e) => {
+    const selectedId = parseInt(e.target.value);
+    onChange(selectedId); // Enviamos el id al componente padre
+  }; 
+
   return (
     <>
-
-      <div className="especie">
         <label
           htmlFor=""
           className="form-label"
         >
           Especie
         </label>
-        <select className="form-select">
+        <select className="form-select" onChange={handleSelectChange} id="especie">
           <option value="">Seleccione una especie</option>
-          {especies.map((especie, index) => (
-            <option key={index} value={especie.descripcion}>
-              {especie.descripcion}
+          {especies.map((item) => (
+            <option key={item.idEspecie} value={item.idEspecie}>
+              {item.descripcion}
             </option>
           ))}
         </select>
-      </div>
     </>
   );
 };

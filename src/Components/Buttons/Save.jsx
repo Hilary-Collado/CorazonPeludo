@@ -1,11 +1,10 @@
 import React from "react";
 import './Buttons.scss';
 
-const Save = () => {
+const Save = ({onClick}) => {
     return (
         <>
-            <button type="submit" className="btn btn-primary buttonSave button">Guardar</button>
-            
+            <button type="submit" className="btn btn-primary buttonSave button" onClick={onClick}>Guardar</button>
         </>
     )
 }
