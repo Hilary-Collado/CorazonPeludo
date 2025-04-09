@@ -41,15 +41,44 @@ import PantallaEmparejamientos from "./Components/Formularios/formProvisional/Pa
 
 import Dashboard from "./Dashboard";
 import Login from "./Components/Formularios/Ingreso/Login";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import NoAutorizado from "./Components/ComponentesRepetitivos/NoAutorizado";
 
+// const PrivateRoute = ({ children }) => {
+//   const user = JSON.parse(localStorage.getItem("user"));
+//   return user ? children : <Navigate to="/" />;
+// };
+
+const PrivateRoute = ({ children }) => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  return user ? children : <Navigate to="/no-autorizado" />;
+};
+ 
 function App() {
   return (
     <>
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          />
+
+          {/* Redirección genérica para rutas no existentes */}
+          <Route path="*" element={<Navigate to="/" />} />
+
+          <Route path="/no-autorizado" element={<NoAutorizado />} />  
         </Routes>
       </Router>
       {/* <Login /> */}
@@ -58,3 +87,23 @@ function App() {
 }
 
 export default App;
+
+/*
+  // En App.jsx
+  const PrivateRoute = ({ children }) => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    return user ? children : <Navigate to="/" />;
+  };
+
+  <Routes>
+    <Route path="/" element={<Login />} />
+    <Route
+      path="/dashboard"
+      element={
+        <PrivateRoute>
+          <Dashboard />
+        </PrivateRoute>
+      }
+    />
+  </Routes>
+*/
