@@ -1,8 +1,4 @@
 import "./App.css";
-// src/index.js
-// import './styles/custom-bootstrap.scss';
-
-// import './App.scss'
 
 import Header from "./Components/Menu/Header/HeaderCliente/HeaderCliente";
 import RegistroTarea from "./Components/Formularios/Admin/RegistroTarea";
@@ -38,14 +34,25 @@ import EspeciesSelect from "./Components/Comp/CompEspeciesSelect";
 // import tipoAmputacion from './Components/ComponentesRepetitivos/TipoAmputaciones';
 
 import TipoAmput from "./Components/Comp/CompTipoAmput";
+// import ProcesoCP from "./Components/Consultas/procesoCP";
+import RegistroAdoptante from "./Components/Formularios/Adopcion/RegistroAdoptante";
+import Mostrar from "./Components/Formularios/Adopcion/Mostrar";
+import PantallaEmparejamientos from "./Components/Formularios/formProvisional/PantallaEmparejamientos";
+
+import Dashboard from "./Dashboard";
+import Login from "./Components/Formularios/Ingreso/Login";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      {/* <TipoAmput /> */}
-      <RecepcionAnimal />
-      {/* <EspeciesSelect/> */}
-      {/* <RegistroEspecie/> */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </Router>
+      {/* <Login /> */}
     </>
   );
 }

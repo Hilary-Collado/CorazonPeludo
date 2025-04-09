@@ -20,24 +20,27 @@ const TipoPiel = ({ onChange }) => {
   const handleSelectChange = (e) => {
     const selectedId = parseInt(e.target.value);
     onChange(selectedId); // Enviamos el id al componente padre
-  }; 
+  };
 
   return (
     <>
-        <label
-          htmlFor=""
-          className="form-label capp"
-        >
-          Tipo de Piel
-        </label>
-        <select className="form-select" id="tipoPiel" onChange={handleSelectChange}>
-          <option value="">Seleccione un tipo de piel</option>
-          {tipoPiel.map((item) => (
-            <option key={item.idTipoPiel} value={item.idTipoPiel}>
-              {item.descripcion}
-            </option>
-          ))}
-        </select>
+      <label htmlFor="" className="form-label capp">
+        Tipo de Piel
+      </label>
+      <select
+        className="form-select"
+        id="tipoPiel"
+        onChange={handleSelectChange}
+      >
+        <option value="" disabled selected>
+          Selecciona Una Opcion...
+        </option>
+        {tipoPiel.map((item) => (
+          <option key={item.idTipoPiel} value={item.idTipoPiel}>
+            {item.descripcion}
+          </option>
+        ))}
+      </select>
     </>
   );
 };

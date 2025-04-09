@@ -8,7 +8,9 @@ const EstadoSalud = ({ onChange }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/estadoSalud");
+        const response = await axios.get(
+          "http://localhost:8000/api/estadoSalud"
+        );
         setEstadoSalud(response.data);
       } catch (error) {
         console.error("Error al obtener los datos tabla EstadoSalud:", error);
@@ -21,24 +23,26 @@ const EstadoSalud = ({ onChange }) => {
     const selectedId = parseInt(e.target.value);
     onChange(selectedId); // Enviamos el id al componente padre
     // onChange(selectedId); // Enviamos el id al componente padre
-  }; 
-  
+  };
+
   return (
     <>
-
       <div className="estadoSalud">
-        <label
-          htmlFor=""
-          className="form-label"
-        >
+        <label htmlFor="" className="form-label">
           Estado de Salud del Animal
         </label>
-        <select className="form-select" id="estadoSalud" onChange={handleSelectChange}>
-          <option value="">Seleccione una opcion</option>
+        <select
+          className="form-select"
+          id="estadoSalud"
+          onChange={handleSelectChange}
+        >
+          <option value="" disabled selected>
+            Selecciona Una Opcion...
+          </option>
           {estadoSalud.map((item) => (
             <option key={item.idEstadoSalud} value={item.idEstadoSalud}>
               {item.descripcion}
-            </option> 
+            </option>
           ))}
         </select>
       </div>

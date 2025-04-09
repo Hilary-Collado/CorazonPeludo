@@ -21,60 +21,60 @@ import './HeaderAdmin.sass'
 
 const HeaderAdmin = () => {
     return (
-        <header id="header" class="header fixed-top d-flex align-items-center">
+        <header id="header" className="header fixed-top d-flex align-items-center">
 
-            <div class="d-flex align-items-center justify-content-between">
-                <a href="" class="logo d-flex align-items-center">
+            <div className="d-flex align-items-center justify-content-between">
+                <a href="" className="logo d-flex align-items-center">
                     <img src={logo} alt="Logo" />
-                    <span class="">Corazon Peludo</span>
+                    <span className="">Corazon Peludo</span>
                 </a>
-                {/* <i class="bi bi-list toggle-sidebar-btn"></i> */}
-                <BsList className='icon toggle-sidebar-btn' />
+                {/* <i className="bi bi-list toggle-sidebar-btn"></i> */}
+                <BsList classNameName='icon toggle-sidebar-btn' />
 
             </div>
             {/* <!-- End Logo --> */}
 
-            <div class="search-bar">
-                <form class="search-form d-flex align-items-center" method="POST" action="#">
+            <div className="search-bar">
+                <form className="search-form d-flex align-items-center" method="POST" action="#">
                     <input type="text" name="query" placeholder="Search" title="Enter search keyword" />
-                    {/* <button type="submit" title="Search"><i class="bi bi-search"></i></button> */}
+                    {/* <button type="submit" title="Search"><i className="bi bi-search"></i></button> */}
                     <button type="submit" title="Search"><CiSearch /></button>
                 </form>
             </div>
             {/* <!-- End Search Bar --> */}
 
-            <nav class="header-nav ms-auto">
-                <ul class="d-flex align-items-center">
+            <nav className="header-nav ms-auto">
+                <ul className="d-flex align-items-center">
 
-                    <li class="nav-item d-block d-lg-none">
-                        <a class="nav-link nav-icon search-bar-toggle " href="#">
-                            {/* <i class="bi bi-search"></i> */}
+                    <li className="nav-item d-block d-lg-none">
+                        <a className="nav-link nav-icon search-bar-toggle " href="#">
+                            {/* <i className="bi bi-search"></i> */}
                             <CiSearch />
                         </a>
                     </li>
                     {/* <!-- End Search Icon--> */}
 
-                    <li class="nav-item dropdown">
+                    <li className="nav-item dropdown">
 
-                        <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-                            {/* <i class="bi bi-bell"></i> */}
+                        <a className="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                            {/* <i className="bi bi-bell"></i> */}
                             <FaBell />
-                            <span class="badge bg-primary badge-number">4</span>
+                            <span className="badge bg-primary badge-number">4</span>
                         </a>
                         {/* <!-- End Notification Icon --> */}
 
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-                            <li class="dropdown-header">
+                        <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                            <li className="dropdown-header">
                                 Tienes 4 notificaciones
-                                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Ver todo</span></a>
+                                <a href="#"><span className="badge rounded-pill bg-primary p-2 ms-2">Ver todo</span></a>
                             </li>
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
 
-                            <li class="notification-item">
-                                {/* <i class="bi bi-exclamation-circle text-warning"></i> */}
-                                <BsExclamationCircle className='icon text-warning' />
+                            <li className="notification-item">
+                                {/* <i className="bi bi-exclamation-circle text-warning"></i> */}
+                                <BsExclamationCircle classNameName='icon text-warning' />
                                 <div>
                                     <h4>Lorem Ipsum</h4>
                                     <p>Quae dolorem earum veritatis oditseno</p>
@@ -83,11 +83,11 @@ const HeaderAdmin = () => {
                             </li>
 
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
 
-                            <li class="notification-item">
-                                <GoXCircle className='icon text-danger' />
+                            <li className="notification-item">
+                                <GoXCircle classNameName='icon text-danger' />
                                 <div>
                                     <h4>Atque rerum nesciunt</h4>
                                     <p>Quae dolorem earum veritatis oditseno</p>
@@ -96,12 +96,12 @@ const HeaderAdmin = () => {
                             </li>
 
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
 
-                            <li class="notification-item">
-                                {/* <i class="bi bi-check-circle text-success"></i> */}
-                                <CiCircleCheck className='icon text-success' />
+                            <li className="notification-item">
+                                {/* <i className="bi bi-check-circle text-success"></i> */}
+                                <CiCircleCheck classNameName='icon text-success' />
                                 <div>
                                     <h4>Sit rerum fuga</h4>
                                     <p>Quae dolorem earum veritatis oditseno</p>
@@ -110,12 +110,12 @@ const HeaderAdmin = () => {
                             </li>
 
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
 
-                            <li class="notification-item">
-                                {/* <i class="bi bi-info-circle text-primary"></i> */}
-                                <GoInfo className="icon text-primary" />
+                            <li className="notification-item">
+                                {/* <i className="bi bi-info-circle text-primary"></i> */}
+                                <GoInfo classNameName="icon text-primary" />
 
                                 <div>
                                     <h4>Dicta reprehenderit</h4>
@@ -125,9 +125,9 @@ const HeaderAdmin = () => {
                             </li>
 
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
-                            <li class="dropdown-footer">
+                            <li className="dropdown-footer">
                                 <a href="#">Show all notifications</a>
                             </li>
 
@@ -140,28 +140,28 @@ const HeaderAdmin = () => {
 
 
 
-                    <li class="nav-item dropdown">
+                    <li className="nav-item dropdown">
 
-                        <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-                            {/* <i class="bi bi-chat-left-text"></i>
+                        <a className="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                            {/* <i className="bi bi-chat-left-text"></i>
                             <BsChatRightText /> */}
                             <BsChatLeftText />
-                            <span class="badge bg-success badge-number">3</span>
+                            <span className="badge bg-success badge-number">3</span>
                         </a>
                         {/* <!-- End Messages Icon --> */}
 
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-                            <li class="dropdown-header">
+                        <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+                            <li className="dropdown-header">
                                 Tienes 3 nuevos mensajes
-                                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Ver todo</span></a>
+                                <a href="#"><span className="badge rounded-pill bg-primary p-2 ms-2">Ver todo</span></a>
                             </li>
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
 
-                            <li class="message-item">
+                            <li className="message-item">
                                 <a href="#">
-                                    <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle" />
+                                    <img src="assets/img/messages-1.jpg" alt="" className="rounded-circle" />
                                     <div>
                                         <h4>Maria Hudson</h4>
                                         <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -170,12 +170,12 @@ const HeaderAdmin = () => {
                                 </a>
                             </li>
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
 
-                            <li class="message-item">
+                            <li className="message-item">
                                 <a href="#">
-                                    <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle" />
+                                    <img src="assets/img/messages-2.jpg" alt="" className="rounded-circle" />
                                     <div>
                                         <h4>Anna Nelson</h4>
                                         <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -184,12 +184,12 @@ const HeaderAdmin = () => {
                                 </a>
                             </li>
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
 
-                            <li class="message-item">
+                            <li className="message-item">
                                 <a href="#">
-                                    <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle" />
+                                    <img src="assets/img/messages-3.jpg" alt="" className="rounded-circle" />
                                     <div>
                                         <h4>David Muldon</h4>
                                         <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -198,10 +198,10 @@ const HeaderAdmin = () => {
                                 </a>
                             </li>
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
 
-                            <li class="dropdown-footer">
+                            <li className="dropdown-footer">
                                 <a href="#">Show all messages</a>
                             </li>
 
@@ -211,61 +211,61 @@ const HeaderAdmin = () => {
                     </li>
                     {/* <!-- End Messages Nav --> */}
 
-                    <li class="nav-item dropdown pe-3">
+                    <li className="nav-item dropdown pe-3">
 
-                        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                            {/* <img src="../NiceAdmin/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle" /> */}
-                            {/* <img src={profileImg} alt="Profile" className='rounded-circle'/> */}
-                            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                        <a className="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                            {/* <img src="../NiceAdmin/assets/img/profile-img.jpg" alt="Profile" className="rounded-circle" /> */}
+                            {/* <img src={profileImg} alt="Profile" classNameName='rounded-circle'/> */}
+                            <span className="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
                         </a>
                         {/* <!-- End Profile Iamge Icon --> */}
 
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                            <li class="dropdown-header">
+                        <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                            <li className="dropdown-header">
                                 <h6>Kevin Anderson</h6>
                                 <span>Administrador</span>
                             </li>
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
 
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                    {/* <i class="bi bi-person"></i> */}
-                                    <MdOutlinePersonOutline className='icon' />
+                                <a className="dropdown-item d-flex align-items-center" href="users-profile.html">
+                                    {/* <i className="bi bi-person"></i> */}
+                                    <MdOutlinePersonOutline classNameName='icon' />
                                     <span>Mi perfil</span>
                                 </a>
                             </li>
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
 
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                    {/* <i class="bi bi-gear"></i> */}
-                                    <GoGear className='icon' />
+                                <a className="dropdown-item d-flex align-items-center" href="users-profile.html">
+                                    {/* <i className="bi bi-gear"></i> */}
+                                    <GoGear classNameName='icon' />
                                     <span>Ajustes</span>
                                 </a>
                             </li>
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
 
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                                    {/* <i class="bi bi-question-circle"></i> */}
-                                    <CiCircleQuestion className='icon' />
+                                <a className="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                                    {/* <i className="bi bi-question-circle"></i> */}
+                                    <CiCircleQuestion classNameName='icon' />
                                     <span>Help?</span>
                                 </a>
                             </li>
                             <li>
-                                <hr class="dropdown-divider" />
+                                <hr className="dropdown-divider" />
                             </li>
 
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    {/* <i class="bi bi-box-arrow-right"></i> */}
-                                    <BsBoxArrowRight className='icon' />
+                                <a className="dropdown-item d-flex align-items-center" href="#">
+                                    {/* <i className="bi bi-box-arrow-right"></i> */}
+                                    <BsBoxArrowRight classNameName='icon' />
                                     <span>Cerrar Sesion</span>
                                 </a>
                             </li>

@@ -45,31 +45,6 @@ const RegistroSolicitudRescate = () => {
                         <input type="text" class="form-control" id="idSolicitante" disabled />
                       </div>
 
-                      {/* <div class="col-md-6">
-            {/* <a href="../enums/registroEspecie.html">Crear nueva</a> */}
-                      {/* <label for="especie" class="form-label">Especie</label> */}
-
-                      {/* VOLVER ESTO UN ARRAY O TRAER DESDE LA DB */}
-                      {/* <select id="especie" class="form-select"> */}
-                      {/* <!-- <div class="data-display0"></div> --> */}
-                      {/* <option value="" disabled selected>Selecciona Una Opcion...</option> 
-              <option value="1">Perro</option>
-              <option value="2">Gato</option>
-              <option value="3">León</option>
-              <option value="4">Elefante</option>
-              <option value="5">Ballena</option>
-              <option value="6">Tigre</option>
-              <option value="7">Jirafa</option>
-              <option value="8">Oso</option>
-              <option value="9">Cebra</option>
-              <option value="10">Hipopótamo</option>
-              <option value="11">Pavo</option>
-              <option value="12">Gallina</option>
-              <option value="13">Reno</option>
-            </select>
-          </div>*/}
-
-
                       <div class="col-md-6">
                         {/* <a href="../enums/registroEspecie.html">Crear nueva</a> */}
                         <label for="especie" class="form-label">Especie</label>

@@ -11,7 +11,7 @@ const FechaModificacion = () => {
     const day = String(today.getDate()).padStart(2, "0");
     const month = String(today.getMonth() + 1).padStart(2, "0");
     const year = today.getFullYear();
-    const formattedDate = `${day}-${month}-${year}`;
+    const formattedDate = `${day}/${month}/${year}`;
     setCurrentDate(formattedDate);
   }, []);
 
@@ -19,7 +19,7 @@ const FechaModificacion = () => {
     <>
       <div className="col-md-6">
         <label for="fechaModificacion" className="form-label">
-          Fecha de Modificacion
+          Fecha
         </label>
 
         <input

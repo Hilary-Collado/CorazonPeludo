@@ -3,13 +3,14 @@ import axios from "axios";
 import "../../App.css";
 
 const CompOrigenAnimal = ({ onChange }) => {
-    const [origen, setOrigen] = useState([]);
+  const [origen, setOrigen] = useState([]);
 
-    
   useEffect(() => {
     const fetchOrigenAnimal = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/OrigenAnimal");
+        const response = await axios.get(
+          "http://localhost:8000/api/OrigenAnimal"
+        );
         setOrigen(response.data);
       } catch (error) {
         console.error("Error al obtener los datos tabla OrigenAnimal:", error);
@@ -21,8 +22,8 @@ const CompOrigenAnimal = ({ onChange }) => {
   const handleSelectChange = (e) => {
     const selectedId = parseInt(e.target.value);
     onChange(selectedId); // Enviamos el id al componente padre
-  }; 
-  
+  };
+
   return (
     <>
       <label for="origen" className="capp form-label">
