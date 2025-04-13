@@ -65,7 +65,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
-          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route
             path="/dashboard"
             element={
@@ -80,8 +80,8 @@ function App() {
 
           <Route path="/no-autorizado" element={<NoAutorizado />} />  
         </Routes>
-      </Router>
-      {/* <Login /> */}
+      </Router> 
+
     </>
   );
 }

@@ -15,7 +15,7 @@ const BotonIngresar  = ({ onClick, disabled = false }) => {
       onClick={onClick}
       disabled={disabled} >
         Ingresar
-        </button>
+        </button> 
     )  
 }
 

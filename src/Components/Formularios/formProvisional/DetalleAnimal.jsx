@@ -1,28 +1,38 @@
 import React from 'react';
 
-const DetalleAnimal = ({ animal, volver }) => {
+import { Modal, Button } from "react-bootstrap";
+
+const DetalleAnimal = ({ animal, cerrar }) => {
+
+
   return (
-    <div className="p-6 max-w-3xl mx-auto">
-      <button onClick={volver} className="text-blue-600 mb-4 underline">
-        ← Volver a la lista
-      </button>
-
-      <div className="border rounded-xl shadow-md overflow-hidden">
-        <img src={animal.imagen} alt={animal.nombre} className="w-full h-72 object-cover" />
-        <div className="p-6">
-          <h2 className="text-2xl font-bold">{animal.nombre}</h2>
-          <p className="text-gray-700">{animal.descripcion}</p>
-          <p className="text-green-600 mt-2 font-semibold">
-            Compatibilidad: {animal.compatibilidad}%
-          </p>
-
-          <button className="mt-4 bg-green-600 text-white px-4 py-2 rounded">
-            Solicitar adopción
-          </button>
+    <div className="modal fade show d-block" tabIndex="-1" style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+      <div className="modal-dialog modal-lg">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title">{animal.nombre}</h5>
+            <button type="button" className="btn-close" onClick={cerrar}></button>
+          </div>
+          <div className="modal-body">
+            <p><strong>Descripción:</strong> {animal.descripcion || "No disponible"}</p>
+            <p><strong>Compatibilidad:</strong> {Math.round(animal.porcentaje_compatibilidad)}%</p>
+            <p><strong>Sexo:</strong> {animal.sexo}</p>
+            <p><strong>Especie:</strong> {animal.especie}</p>
+            {/* Puedes agregar más detalles aquí */}
+          </div>
+          <div className="modal-footer">
+            <button className="btn btn-secondary" onClick={cerrar}>
+              Cerrar
+            </button>
+            <button className="btn btn-success">Solicitar adopción</button>
+          </div>
         </div>
       </div>
     </div>
   );
 };
+
+
+
 
 export default DetalleAnimal;
