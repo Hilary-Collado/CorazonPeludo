@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import CriteriosMatchCard from "./CriteriosMatchCard";
 
 import HeaderAdmin from "../../Menu/Header/HeaderAdmin/HeaderAdmin";
 import Aside from "../../Menu/Aside/Aside";
@@ -11,11 +12,10 @@ import "../../../App.css";
 
 const Emparejamiento = () => {
   const [dashboard, setDashboard] = useState({
-    // title: "Dashboard",
-    mensaje: "Hola,",
+    title: "Dashboard",
   });
 
-  const { mensaje } = dashboard;
+  const { title } = dashboard;
 
   const [animales, setAnimales] = useState([]);
   const [usuario, setUsuario] = useState(null);
@@ -44,44 +44,35 @@ const Emparejamiento = () => {
 
   return (
     <>
-      {/* <HeaderAdmin /> */}
-      {/* <Aside /> */}
-      <main id="main" className="main">
-        {/* <PageTitle titulo={dashboard} /> */}
-        {/* <section className="section">
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title">
-                {dashboard.mensaje} {usuario?.nombre}
-              </h5> */}
-
-              {esNuevo ? (
-                <>
-                  <div className="alert alert-info">
-                    Por favor, completa tu información para obtener
-                    recomendaciones.
-                  </div>
-                  <button
-                    className="btn btn-primary mb-4"
-                    onClick={() => navigate("#")} // ← Puedes cambiar a la ruta de tu formulario
-                  >
-                    Completar Información
-                  </button>
-                  <PantallaEmparejamientos
-                    idPersona={usuario?.id_persona}
-                    esNuevo={true}
-                  />
-                </>
-              ) : (
+      <div className="completo flex flex-col md:flex-row gap-4 p-4">
+        <div className="w-full">
+          {esNuevo ? (
+            <>
+              <div className="alert alert-info">
+                Por favor, completa tu información para obtener recomendaciones.
+              </div>
+              <button
+                className="btn btn-primary mb-4"
+                onClick={() => navigate("#")}
+              >
+                Completar Información
+              </button>
+              <PantallaEmparejamientos
+                idPersona={usuario?.id_persona}
+                esNuevo={true}
+              />
+            </>
+          ) : (
+            <div className="">
+              <div className="w-full ">
                 <PantallaEmparejamientos idPersona={usuario?.id_persona} />
-              )}
-            {/* </div>
-          </div>
-        </section> */}
-      </main>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </>
   );
-
 };
 
 export default Emparejamiento;

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import ButtonEmparejamiento from "../../Buttons/ButtonEmparejamiento";
 import PersonalidadAnimal from "../Animales/PersonalidadAnimal";
+import Swal from "sweetalert2";
 
 import DetalleAnimal from "../formProvisional/DetalleAnimal";
 import Close from "../../Buttons/Close";
@@ -11,12 +12,15 @@ const ShowAnimals = () => {
   const [animales, setAnimales] = useState([]);
   const [animalSeleccionado, setAnimalSeleccionado] = useState(null);
   const [mostrarModal, setMostrarModal] = useState(false);
+
   const [dashboard, setDashboard] = useState({
     title: "Animales Disponibles para adopción",
     mensaje: "Hola,",
     final: "¿Listo/a adoptar?",
   });
   const { title, mensaje } = dashboard;
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAnimales = async () => {
@@ -30,7 +34,6 @@ const ShowAnimals = () => {
       }
     };
     fetchAnimales();
-    // if (idPersona) fetchAnimales();
   }, []);
 
   const abrirModal = (animal) => {
@@ -44,14 +47,29 @@ const ShowAnimals = () => {
     setMostrarModal(false);
   };
 
+  const handleMessage = (e) => {
+    Swal.fire({
+      title: "Solicitud enviada con exito!",
+      text: "Nos pondremos en contacto contigo pronto.",
+      icon: "success",
+      draggable: true,
+      position: "center",
+      timer: 1800,
+    });
+  };
+
+  const handleRedirect = () => {
+    navigate("/emparejamiento");
+  };
+
   return (
     <>
-      <div className="card-body">
+      {/* <div className="card-body"> */}
         <div className="flex justify-between pb-4">
           <h3 className="card-title">{title}</h3>
-          <ButtonEmparejamiento />
+          <ButtonEmparejamiento onClick={handleRedirect} />
         </div>
-        {/*onClick={handleLogin}*/}
+
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {animales.map((animal) => (
             <div
@@ -66,12 +84,11 @@ const ShowAnimals = () => {
               <div className="p-4">
                 <h2 className="text-xl font-semibold">{animal.nombre}</h2>
                 <p className="text-gray-600">
-                  {animal.edad_ingreso} {animal.tipoEdad}
+                  <strong>Edad:</strong> {animal.edad_ingreso} {animal.tipoEdad}
                 </p>
-                <div className="text-gray-600">Genero: {animal.sexo}</div>
-                {/* <p className="mt-2 text-green-600 font-semibold">
-                  Compatibilidad: {Math.round(animal.porcentaje_compatibilidad)}%
-                </p> */}
+                <div className="text-gray-600">
+                  <strong>Genero:</strong> {animal.sexo}
+                </div>
                 <button
                   onClick={() => setAnimalSeleccionado(animal)}
                   className="mt-3 bg-blue-600 text-white px-4 py-2 rounded w-full"
@@ -88,25 +105,21 @@ const ShowAnimals = () => {
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white p-6 rounded-xl w-full max-w-3xl overflow-y-auto max-h-[90vh] shadow-lg">
               <div className="justify-between items-center pb-4 flex text-center">
+                <h2 className="text-2xl font-bold">
+                  {animalSeleccionado.nombre}
+                </h2>
                 <button
                   className=" bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
                   onClick={() => setAnimalSeleccionado(null)}
                 >
                   Cerrar
                 </button>
-
-                <h2 className="text-2xl font-bold">
-                  {animalSeleccionado.nombre}
-                </h2>
               </div>
-
               {/* Imagen */}
               <div className="h-48 bg-gray-200 mb-4 flex items-center justify-center text-gray-500">
                 Imagen del animal aquí
               </div>
-
               <h3 className="text-lg font-semibold mb-2">Datos Generales</h3>
-            
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <p>
                   <strong>Edad:</strong> {animalSeleccionado.edad_ingreso}{" "}
@@ -168,12 +181,32 @@ const ShowAnimals = () => {
               </div>
               <hr class=" h-0.5 border-t-0 bg-gray-600" />
               {/* <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" /> */}
-
               <PersonalidadAnimal idAnimal={animalSeleccionado.idIngAnimales} />
+              {/* <button
+                className=" bg-green-800 text-white px-4 py-2 rounded hover:bg-green-900"
+                onClick={handleMessage}
+              >
+                Quiero Adoptar
+              </button> */}
+              <div className="flex justify-between">
+                <button
+                  className=" bg-green-800 text-white px-4 py-2 rounded hover:bg-green-900"
+                  onClick={handleMessage}
+                >
+                  Quiero Adoptar
+                </button>
+                
+                <button
+                  className=" bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+                  onClick={() => setAnimalSeleccionado(null)}
+                >
+                    Cancelar
+                </button>
+              </div>
             </div>
           </div>
         )}
-      </div>
+      {/* </div> */}
     </>
   );
 };

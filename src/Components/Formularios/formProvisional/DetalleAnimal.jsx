@@ -18,7 +18,7 @@ const DetalleAnimal = ({ animal, cerrar }) => {
             <p><strong>Compatibilidad:</strong> {Math.round(animal.porcentaje_compatibilidad)}%</p>
             <p><strong>Sexo:</strong> {animal.sexo}</p>
             <p><strong>Especie:</strong> {animal.especie}</p>
-            {/* Puedes agregar más detalles aquí */}
+           
           </div>
           <div className="modal-footer">
             <button className="btn btn-secondary" onClick={cerrar}>

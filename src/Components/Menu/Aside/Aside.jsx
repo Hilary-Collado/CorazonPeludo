@@ -6,9 +6,7 @@ import RecepcionAnimal from "../../Formularios/Animales/RecepcionAnimal";
 const Aside = () => {
     const [titulo, setTitulo] = useState({
         title: "hola que tal",
-        // title: "Ingreso De Animales",
-    })
-
+    }) 
     
     return (
         <>
@@ -25,27 +23,13 @@ const Aside = () => {
                     </li>
                     {/* <!-- End Dashboard Nav --> */}
 
-
-
                     {/* <!--Registro --> */}
                     <li className="nav-item">
                         <a className="nav-link collapsed" data-bs-target="#animales-nav" data-bs-toggle="collapse" href="#">
                             <i className="bi bi-menu-button-wide"></i><span>Animales</span><i className="bi bi-chevron-down ms-auto"></i>
                         </a>
                         <CardBaseDos titulo={titulo}/> 
-                        {/* <RecepcionAnimal titulo={titulo}/> */}
-                        {/* <ul id="animales-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
-                            <li>
-                                <a href="">
-                                    <i className="bi bi-circle"></i><span>Registro De Animales</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../consultas/ConsultaAnimales.html">
-                                    <i className="bi bi-circle"></i><span>Consulta Animales</span>
-                                </a>
-                            </li>
-                        </ul> */}
+                        
                     </li>
                     {/* <!-- End registro Nav --> */}
 

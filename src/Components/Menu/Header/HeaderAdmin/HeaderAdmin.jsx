@@ -22,10 +22,8 @@ import "./HeaderAdmin.sass";
 import BotonCerrarSesion from "../../../Buttons/CerrarSesion";
 
 const HeaderAdmin = () => {
-  //  Obtener el usuario del localStorage
   const user = JSON.parse(localStorage.getItem("user"));
 
-  // Si existe, formatear nombre
   const nombreCompleto = user ? `${user.nombre} ${user.apellido}` : "Invitado";
   const rol = user ? user.rol : "Sin rol";
 
@@ -35,12 +33,11 @@ const HeaderAdmin = () => {
         <a href="" className="logo d-flex align-items-center">
           <img src={logo} alt="Logo" />
           <span className="">Corazon Peludo</span>
-        </a>
-        {/* <i className="bi bi-list toggle-sidebar-btn"></i> */}
+        </a> 
+       
         <BsList classNameName="icon toggle-sidebar-btn" />
       </div>
-      {/* <!-- End Logo --> */}
-
+      
       <div className="search-bar">
         <form
           className="search-form d-flex align-items-center"
@@ -53,7 +50,7 @@ const HeaderAdmin = () => {
             placeholder="Search"
             title="Enter search keyword"
           />
-          {/* <button type="submit" title="Search"><i className="bi bi-search"></i></button> */}
+          
           <button type="submit" title="Search">
             <CiSearch />
           </button>
@@ -65,7 +62,6 @@ const HeaderAdmin = () => {
         <ul className="d-flex align-items-center">
           <li className="nav-item d-block d-lg-none">
             <a className="nav-link nav-icon search-bar-toggle " href="#">
-              {/* <i className="bi bi-search"></i> */}
               <CiSearch />
             </a>
           </li>
@@ -73,11 +69,10 @@ const HeaderAdmin = () => {
 
           <li className="nav-item dropdown">
             <a className="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-              {/* <i className="bi bi-bell"></i> */}
+              
               <FaBell />
               <span className="badge bg-primary badge-number">4</span>
             </a>
-            {/* <!-- End Notification Icon --> */}
 
             <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
               <li className="dropdown-header">
@@ -93,7 +88,7 @@ const HeaderAdmin = () => {
               </li>
 
               <li className="notification-item">
-                {/* <i className="bi bi-exclamation-circle text-warning"></i> */}
+                
                 <BsExclamationCircle classNameName="icon text-warning" />
                 <div>
                   <h4>Lorem Ipsum</h4>
@@ -120,7 +115,6 @@ const HeaderAdmin = () => {
               </li>
 
               <li className="notification-item">
-                {/* <i className="bi bi-check-circle text-success"></i> */}
                 <CiCircleCheck classNameName="icon text-success" />
                 <div>
                   <h4>Sit rerum fuga</h4>
@@ -134,7 +128,6 @@ const HeaderAdmin = () => {
               </li>
 
               <li className="notification-item">
-                {/* <i className="bi bi-info-circle text-primary"></i> */}
                 <GoInfo classNameName="icon text-primary" />
 
                 <div>
@@ -157,8 +150,6 @@ const HeaderAdmin = () => {
 
           <li className="nav-item dropdown">
             <a className="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-              {/* <i className="bi bi-chat-left-text"></i>
-                            <BsChatRightText /> */}
               <BsChatLeftText />
               <span className="badge bg-success badge-number">3</span>
             </a>
@@ -254,15 +245,13 @@ const HeaderAdmin = () => {
               href="#"
               data-bs-toggle="dropdown"
             >
-              {/* <span className="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span> */}
+            
               <NombreUsuario />
             </a>
             {/* <!-- End Profile Iamge Icon --> */}
 
             <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
               <li className="dropdown-header">
-                {/* <h6>Kevin Anderson</h6>
-                <span>Administrador</span> */}
                 <h6>
                   {user
                     ? user.username === "admin"
@@ -270,7 +259,7 @@ const HeaderAdmin = () => {
                       : nombreCompleto
                     : "Invitado"}
                 </h6>
-                {/* <span>{rol}</span> */}
+                
               </li>
               <li>
                 <hr className="dropdown-divider" />
@@ -281,7 +270,6 @@ const HeaderAdmin = () => {
                   className="dropdown-item d-flex align-items-center"
                   href="users-profile.html"
                 >
-                  {/* <i className="bi bi-person"></i> */}
                   <MdOutlinePersonOutline classNameName="icon" />
                   <span>Mi perfil</span>
                 </a>
@@ -295,7 +283,6 @@ const HeaderAdmin = () => {
                   className="dropdown-item d-flex align-items-center"
                   href="users-profile.html"
                 >
-                  {/* <i className="bi bi-gear"></i> */}
                   <GoGear classNameName="icon" />
                   <span>Ajustes</span>
                 </a>
@@ -309,7 +296,6 @@ const HeaderAdmin = () => {
                   className="dropdown-item d-flex align-items-center"
                   href="pages-faq.html"
                 >
-                  {/* <i className="bi bi-question-circle"></i> */}
                   <CiCircleQuestion classNameName="icon" />
                   <span>Help?</span>
                 </a>
@@ -320,8 +306,7 @@ const HeaderAdmin = () => {
 
               <li>
                 <a className="dropdown-item d-flex align-items-center" href="#">
-                  {/* <BsBoxArrowRight classNameName="icon" />
-                  <span>Cerrar Sesion</span> */}
+                  
                   <BotonCerrarSesion />
                 </a>
               </li>

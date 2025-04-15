@@ -49,23 +49,18 @@ import {
 } from "react-router-dom";
 import NoAutorizado from "./Components/ComponentesRepetitivos/NoAutorizado";
 
-// const PrivateRoute = ({ children }) => {
-//   const user = JSON.parse(localStorage.getItem("user"));
-//   return user ? children : <Navigate to="/" />;
-// };
-
 const PrivateRoute = ({ children }) => {
   const user = JSON.parse(localStorage.getItem("user"));
   return user ? children : <Navigate to="/no-autorizado" />;
 };
- 
+
 function App() {
   return (
     <>
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
           <Route
             path="/dashboard"
             element={
@@ -74,14 +69,21 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route
+            path="/emparejamiento"
+            element={
+              <PrivateRoute>
+                <PantallaEmparejamientos />
+              </PrivateRoute>
+            }
+          />
 
           {/* Redirección genérica para rutas no existentes */}
           <Route path="*" element={<Navigate to="/" />} />
 
-          <Route path="/no-autorizado" element={<NoAutorizado />} />  
+          <Route path="/no-autorizado" element={<NoAutorizado />} />
         </Routes>
-      </Router> 
-
+      </Router>
     </>
   );
 }

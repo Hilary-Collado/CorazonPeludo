@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const PersonalidadAnimal = ({ idAnimal }) => {
+const PersonalidadAnimal = ({ idAnimal, compatibilidad }) => {
   const [caracteristicas, setCaracteristicas] = useState([]);
   const [etiquetas, setEtiquetas] = useState([]);
 
@@ -39,7 +39,7 @@ const PersonalidadAnimal = ({ idAnimal }) => {
             <ul className="list-disc pl-5">
               {caracteristicas.map((c) => (
                 <li key={c.id_caracteristica}>
-                  {c.nombre}: {c.valor}/10 ({c.fuente})
+                  {c.nombre}: {c.valor}/10
                 </li>
               ))}
             </ul>
@@ -47,24 +47,40 @@ const PersonalidadAnimal = ({ idAnimal }) => {
             <p>No se registraron características.</p>
           )}
         </div>
-
         <div>
-          {/* <h4 className="font-medium">Etiquetas:</h4> */}
-          <strong>Etiquetas:</strong>
-          {etiquetas.length > 0 ? (
-            <ul className="flex flex-wrap gap-2 mt-2">
-              {etiquetas.map((e) => (
-                <span
-                  key={e.id_etiqueta}
-                  className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
-                >
-                  {e.descripcion}
-                </span>
-              ))}
-            </ul>
-          ) : (
-            <p>No se registraron etiquetas.</p>
-          )}
+          <div>
+            {/* <h4 className="font-medium">Etiquetas:</h4> */}
+            <strong>Etiquetas:</strong>
+            {etiquetas.length > 0 ? (
+              <ul className="flex flex-wrap gap-2 mt-2">
+                {etiquetas.map((e) => (
+                  <span
+                    key={e.id_etiqueta}
+                    className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+                  >
+                    {e.descripcion}
+                  </span>
+                ))}
+              </ul>
+            ) : (
+              <p>No se registraron etiquetas.</p>
+            )}
+          </div>
+          <br />
+          <p
+            className={`inline-block mt-3 p-2 rounded-full text-sm font-semibold ${
+              compatibilidad >= 80
+                ? "bg-green-100 text-green-800"
+                : compatibilidad >= 50
+                ? "bg-yellow-100 text-yellow-800"
+                : "bg-red-100 text-red-800"
+            }`}
+          >
+            <strong>Compatibilidad:</strong>{" "}
+            {compatibilidad !== undefined
+              ? `${compatibilidad}%`
+              : "No disponible"}
+          </p>
         </div>
       </div>
     </div>
